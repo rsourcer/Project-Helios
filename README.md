@@ -1,2 +1,3 @@
 # Project-Helios
-Creation of a digitally assisted optical Michaelson interferometry platform using parts from a recycled DVD drive.
+Creation of a digitally assisted optical Michaelson interferometry platform using parts from a recycled DVD drive. 
+Publishing via vscode...
