@@ -1,3 +1,3 @@
-# Project-Helios
+# Helios-Open-Michaelson-Interferometer
 Creation of a digitally assisted optical Michaelson interferometry platform using parts from a recycled DVD drive. 
 Publishing via vscode...
