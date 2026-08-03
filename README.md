@@ -18,6 +18,8 @@ Further explanations are in the JOURNAL.md file.
 | Amplifier | IC 741 Op-Amp (tentative) |
 | Capacitor | 100 pF Capacitor (tentative) | 
 | Resistor | 10kOhm Resistor (tentative) |
+| Coil | Nickel Wire (tentative) |
+| Power Supply | DC Variable Power Supply |
 |**Mechanical** | |
 | Micrometer | 0.1+-0.02 mm Sliding Ruler Micrometer (tentative) |
 | Adjustment Springs | Recycled from used DVD drive |
