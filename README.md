@@ -17,7 +17,7 @@ Further explanations are in the JOURNAL.md file.
 | Board | Arduino Uno ATmega328P |
 | Amplifier | IC 741 Op-Amp (tentative) |
 | Capacitor | 100 pF Capacitor (tentative) | 
-| Resistor | 10kOhm Resistor (tentative) |
+| Resistor | 50kOhm Resistor (tentative) |
 | Coil | Nickel Wire (tentative) |
 | Power Supply | DC Variable Power Supply |
 |**Mechanical** | |
