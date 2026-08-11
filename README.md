@@ -13,7 +13,7 @@ Further explanations are in the JOURNAL.md file.
 | **Optics** |  |
 | Laser Diode | 640-660nm, Recycled from used DVD drive |
 | Beam Splitting Glass | Budget 50:50 Cube Beamsplitter|
-| Mirrors | 2x λ/10 Flatness Aluminum UV Protected Square Mirror, 12.7x12.7mm |
+| Mirrors | 2x λ/10 Flatness Protected Silver Square Mirror, 12.7x12.7mm |
 | Lens | 160/0.17 10X Achromatic Objectives Lens |
 |**Electronics** | |
 | Board | Arduino Uno ATmega328P |
