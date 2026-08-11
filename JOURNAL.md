@@ -111,7 +111,7 @@ $$\Delta \phi = \frac{4\pi \Delta L}{\lambda}$$
 
 **Laser Diode, springs:** From DVD Drive
 
-**Mirrors :** 2x Thorlabs PFSQ10-03-F01 (161.16$ after shipping) 
+**Mirrors :** 2x Thorlabs PFSQ10-03-P01 
 
 **Beamsplitter:** Beam Splitter Cube, Optical Glass Dichroic Prism Ratio 50:50 Spectrome Sicence (20mm) ( Amazon) 
 https://www.amazon.ca/gp/product/B0B34FK2GF
