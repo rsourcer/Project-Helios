@@ -7,7 +7,7 @@ $$\lambda = \frac{2d}{\Delta N}$$ , where d is the distance the mirror moves by 
 In turn, it is therefore possible to measure a **magnetic field**'s strength using the effect on light passing through the system. - see more details in JOURNAL.md for more details on the formulas/methodology used.
 
 # Hardware:
-Further explanations are in the JOURNAL.md file.
+
 |  |  |
 |:-------------|:--------------|
 | **Optics** |  |
@@ -30,3 +30,5 @@ Further explanations are in the JOURNAL.md file.
 |**Miscellaneous** | |
 | Breadboard | Adapted CNC MDF 3040 Spoilboard, 30x36cm |
 | Image Surface | Ground Glass (tentative) |
+
+Further explanations are in the JOURNAL.md file - I recommend checking it out! 
