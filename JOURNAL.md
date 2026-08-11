@@ -1,8 +1,8 @@
-**Engineering Log for Open Source Michaelson Interferometer**
-**Revision 0.2**
-Raoul Salemi
-This log is accurate as of 11/08/2026, 00:33 AM EST
-
+**Engineering Log for Open Source Michaelson Interferometer**\
+**Revision 0.2**\
+Raoul Salemi\
+This log is accurate as of 11/08/2026, 00:33 AM EST\
+\
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
 # **About this project**
@@ -17,67 +17,67 @@ It can then:
 - Accurately calculate wavelengths (defined later) based off mirror's movement from the micrometer's translation.
 - Determine magnetostriction constant of a solenoid on which a mirror is mounted, based off the change in position of the aforementioned mirror.
 
-**The formula for measuring wavelength as the mirror moves is**
-$$\lambda = \frac{2d}{\Delta N}$$Where d is the distance between fringes and ΔN is the number of fringes observed.
-
-However, Michaelson Interferometers also prove very useful for a variety of experiments, one of such being magnetostriction. While the mirror attached to the micrometer stays static, this studies the change of distance in another mirror, facing the photodiode, once mounted to the edge of a ferromagnetic sample rod. As a magnetic field is contained inside it, the rod can either expand or contract, changing the mirror's position. We can therefore measure its magnetostriction constant by first, finding out how much the change in size of the coil through the movement of the mirror, with the formula:
-
-$$\Delta L = N_{fringes} \cdot \frac{\lambda}{2} $$
-Where N_{fringes} is the amount of peaks seen in the photodiode signal and λ is the laser wavelength. Then, use 
-$$\lambda_m = \frac{\Delta L}{L_0}$$
-Where L0 is the length of the unmagnetized rod, and λm is the magnetostriction strain. Then, to find the field strength of the rod, H, we can use 
-$$H = \frac{N \cdot I}{l}$$
+**The formula for measuring wavelength as the mirror moves is**\
+$$\lambda = \frac{2d}{\Delta N}$$  Where d is the distance between fringes and ΔN is the number of fringes observed.\
+\
+However, Michaelson Interferometers also prove very useful for a variety of experiments, one of such being magnetostriction. While the mirror attached to the micrometer stays static, this studies the change of distance in another mirror, facing the photodiode, once mounted to the edge of a ferromagnetic sample rod. As a magnetic field is contained inside it, the rod can either expand or contract, changing the mirror's position. We can therefore measure its magnetostriction constant by first, finding out how much the change in size of the coil through the movement of the mirror, with the formula:\
+\
+$$\Delta L = N_{fringes} \cdot \frac{\lambda}{2} $$\
+Where N_{fringes} is the amount of peaks seen in the photodiode signal and λ is the laser wavelength. Then, use\
+$$\lambda_m = \frac{\Delta L}{L_0}$$\
+Where L0 is the length of the unmagnetized rod, and λm is the magnetostriction strain. Then, to find the field strength of the rod, H, we can use \
+$$H = \frac{N \cdot I}{l}$$\
 Where N is the number of turns in the coil, I is the current, and L is the length of the coil.
-Then, increasing H (by raising the current) until dL plateaus and reaches a stable value. At that point, λm will be equal to the magnetostriction constant for the metal, λs.
-
-
-The optical phase shift of the light can also be calculated, and varies by 
+Finally, if we increase H (by raising the current) until dL plateaus and reaches a stable value, λm will be equal to the magnetostriction constant for the metal, λs.\
+\
+\
+The optical phase shift of the light can also be calculated, and varies by \
 $$\Delta \phi = \frac{4\pi \Delta L}{\lambda}$$
 [1]
 # **Components needed**
 
 *Optical:*
-- Laser Diode 
+- Laser Diode \
 	The laser diode is what provides the system with an initial, focalized and uniform light source, crucial for the interferometry experiment as its intensity will be measured. It will be recycled from the DVD drive.
-- Beam Splitting Glass (Cube/Flat)
+- Beam Splitting Glass (Cube/Flat)\
 	This component splits the rays of light emitted by the laser light and sends them towards the parallel and perpendicular mirrors when at a 45 degree angle respective to the laser diode. It is important that this part splits the light evenly, as uneven distribution could alter results.
-- 2x Reflective Flat Mirror
+- 2x Reflective Flat Mirror\
 	The mirrors reflect the light back to be recombined towards the beam splitter, which is what causes the interference effect - light acting on itself at the same place, cancelling itself out. λ/4 optical precision or higher would be wanted for such mirrors to ensure their accuracy for interferometry, while keeping them at a reasonable price point.
 
-- Optional: Compensating glass plate
+- Optional: Compensating glass plate\
 	In multi-wavelength light applications, this is crucial for accuracy, and makes sure that light of all wavelengths travel through the same amount of glass no matter where the beam splitter sends them. Without it, with multiple wavelengths, refraction effects make the light much less useful for experimentation. This isn't needed at all if we have a cube beam splitter, as the light passes through the same amount of glass in those circumstances. [2]
 
 *Mechanical:*
-- Mirror adjustment system (M3 screws, plates, micrometer)
+- Mirror adjustment system (M3 screws, plates, micrometer)\
 	This is to adjust where the mirrors are on the system, fixing them in place yet allowing 1 axis of translational movement. One of the mirrors should also be connected to the rod inside the solenoid for magnetostriction testing. The other moves attached to a micrometer head: This will be used for determining the experimental wavelength of the laser. As the mirror moves
-- Micrometer 
+- Micrometer \
 	This is to very precisely adjust the distance along which the mirror will move: as the mirror moves further into and out of the ray, the fringes will vary causing a change in light intensity in the photodiode. This signal is what will be used to calculate the wavelength of the light, depending on how far the mirror moves - therefore, high precision for its movement is important. It should also be able to lock into fixed position when the coil's magnetism is being tested, too.
-- Mechanical Breadboard
+- Mechanical Breadboard\
 	This will be a solid starting plate to place all our components on, and fix them in place where they are desired.
 
 *Measurement/Calibration:*
-- Divergent Lens (Concave)
+- Divergent Lens (Concave)\
 	This enlarges the image of the interference fringes, allowing for calibration and visual testing (to make sure no unusual behaviour is produced). Short focal lengths preferred as the image should be enlarged quite a bit.
-- Ground glass (any surface producing clean fringe image)
+- Ground glass (any surface producing clean fringe image)\
 	This is a surface to show the clear interference pattern enlarged by the lens.
 
 *Electronics:*
-- Photodiode sensor
+- Photodiode sensor\
 	This component picks up the recombined light emitted by the laser and sends electrical pulses based on the light's intensity.
-- Amplifier
+- Amplifier\
 	Amplifies the photodiode's detection of the laser, filtering out all other muddying noise.
-- Arduino Uno (or alternative)
+- Arduino Uno (or alternative)\
 	Processes the signal from photodiode, allowing the data to be analyzed from a computer.
-- Rod
+- Rod\
 	During magnetostriction tests, a mirror is mounted onto it, and the rod expands/contracts as a magnetic field induced by the solenoid flows through it.
-- Solenoid/Coil: 
+- Solenoid/Coil: \
 	During magnetostriction tests, this is what induces a magnetic field on the metal rod.
 
 *Software:*
-- KiCad (for electronics schematics (?))
-- TinkerCAD (for visual representation)
-- Python (programming of electronics (?))
-- any 3d printing software (I have experience in Blender and Fusion 360)
+- KiCad (for electronics schematics (?))\
+- TinkerCAD (for visual representation)\
+- Python (programming of electronics (?))\
+- any 3d printing software (I have experience in Blender and Fusion 360)\
 
 # **Constraints** 
 
@@ -159,13 +159,13 @@ Computer
 # **Daily progress tracking**
 
 
-	2026-07-23
-	Goal: Gain a concrete understanding of what I need for this project
-	Time spent: 48 min
-	Activities: Research, journaling (creation of this document, checking product listings
+	2026-07-23\
+	Goal: Gain a concrete understanding of what I need for this project\
+	Time spent: 48 min\
+	Activities: Research, journaling (creation of this document, checking product listings\
 	
-	Decisions:  
-	 D-001 - I have opted to use an unused DVD drive to source many of the components for a Michaelson Interferometer
+	Decisions:  \
+	 D-001 - I have opted to use an unused DVD drive to source many of the components for a Michaelson Interferometer\
 	 
 	Reason: This seems to be a common element of low cost solutions for this device: DVD drives come with laser diodes (640-660nm) , lenses and a semi transparent mirror, parts which have already been tested as useful for the creation of a Michaelson Interferometer in the past. [4]
 	
@@ -176,15 +176,15 @@ Retroactive answer: The compensator mirror is used in multi-wavelength applicati
 
 --------------------------------------------------------------------------
 
-	2026-07-24
-	Goal: Better my mental picture of the required assembly
-	Time spent: 
-	Activities: Setting up KiCad, sketching rough paper blueprint, researching required electronic components
+	2026-07-24\
+	Goal: Better my mental picture of the required assembly\
+	Time spent: \
+	Activities: Setting up KiCad, sketching rough paper blueprint, researching required electronic components\
 	
-	Decisions:  
-	 D-002 - I have opted to have two variations of the system - one to calibrate the interferometer, consisting of a lens and a surface where the fringes will be visible - and one consisting of the electronic measuring components. This is to maximize the ease of precise set-up and reliable measurement precision of the respective methods.
+	Decisions:  \
+	 D-002 - I have opted to have two variations of the system - one to calibrate the interferometer, consisting of a lens and a surface where the fringes will be visible - and one consisting of the electronic measuring components. This is to maximize the ease of precise set-up and reliable measurement precision of the respective methods.\
 	 
-	D-003 - I have opted to use an Arduino Uno R3 compatible clone rather than the official product to save cost. The Elegoo R3 is currently the most seemingly promising option. This will allow to maximize value elsewhere.
+	D-003 - I have opted to use an Arduino Uno R3 compatible clone rather than the official product to save cost. The Elegoo R3 is currently the most seemingly promising option. This will allow to maximize value elsewhere.\
 	
 
 
@@ -192,40 +192,40 @@ Lingering Questions: Why must we need a capacitor and resistor for the circuit? 
 Answer: When a photodiode receives light, it does not modify the voltage of the circuit in of itself, but the amount of current flowing through it. This is what allows us to get a signal. However, without an amplifier, the difference in current produced by the light can be minimal and prone to noise, greatly decreasing its efficiency. Therefore, the amplifier helps to mitigate the effects caused by noise, and get a much clearer picture of the laser's signal.
 
 --------------------------------------------------------------------------
-2026-07-26
-	Goal: Completely understand electronics aspects of the interferometry
-	Time spent: 
-	Activities: Research on electronics equipment needed. Beginning a rough KiCad schematic.
+2026-07-26\
+	Goal: Completely understand electronics aspects of the interferometry\
+	Time spent: \
+	Activities: Research on electronics equipment needed. Beginning a rough KiCad schematic.\
 	
-	Decisions:  
-	 D-004 - I have decided on what parts I will use - I will couple the Elegoo R3 as discussed yesterday with a BPW43 photodiode, as it is a photodiode suited for near-IR range, inexpensive and has lots of educational resources available. Coupled to these two components could be a UA741 op-amp, which seems to be a common pairing with this photodiode.[5]
+	Decisions:  \
+	 D-004 - I have decided on what parts I will use - I will couple the Elegoo R3 as discussed yesterday with a BPW43 photodiode, as it is a photodiode suited for near-IR range, inexpensive and has lots of educational resources available. Coupled to these two components could be a UA741 op-amp, which seems to be a common pairing with this photodiode.[5]\
 	
-One thing which helped me today was the BPW43 photodiode tutorial [6], which helped me to further understand how the electronics of this project will function. 
+One thing which helped me today was the BPW43 photodiode tutorial [6], which helped me to further understand how the electronics of this project will function. \
 
-Lingering Questions: Given my needed applications, should I really use KiCad? Should I create a PCB, or invest in a breadboard? What advantages and disadvantages would there be to this? Is this still a question for which it is too early to tell?
+Lingering Questions: Given my needed applications, should I really use KiCad? Should I create a PCB, or invest in a breadboard? What advantages and disadvantages would there be to this? Is this still a question for which it is too early to tell?\
 Answer: ...No. There is no real benefit to remodel the circuit on KiCad as TinkerCAD already has a schematic model which works fine.
 
 
 -------------------------------------------------------------------------------------------------------------
 2027-07-27
-	Goal: Finalize real electronic design and schematic
-	Time spent:
-	Activities: Journal refining, Researching TinkerCAD to further progress on electronics for my project
+	Goal: Finalize real electronic design and schematic\
+	Time spent:\
+	Activities: Journal refining, Researching TinkerCAD to further progress on electronics for my project\
 	
-	Decisions:  
-	 D-005 - I decided to use TinkerCAD to create a model of the TIA photodiode circuit, as many templates are available to choose from - this will make it easy for me to verify my circuit logic. It also has a much smaller learning curve than KiCad does.
+	Decisions:  \
+	 D-005 - I decided to use TinkerCAD to create a model of the TIA photodiode circuit, as many templates are available to choose from - this will make it easy for me to verify my circuit logic. It also has a much smaller learning curve than KiCad does.\
 	
 One thing which helped me today was the TinkerCAD photodiode preset, which shows how to make a (albeit less complicated) version of the photodiode system I seek to create. Using this, I can easily gain a clearer picture of what the electronics are supposed to look like once adapting it into a TIA design, as opposed to immediately jumping into KiCad and hoping to understand - what I felt I was doing in the previous days of research. This also allows me to pre-emptively program the circuit long before getting around to building it. (and, of course, some real world aspects are overlooked in TinkerCAD, so I can only use the code blocks offered as simple guidance). My course of action is now to use the simplified TinkerCAD model to understand the wiring, then, replicate it on KiCad now that I have improved my knowledge on how to use the program.
 
 
 ------------------------------------
-2026-07-28
-	Goal: ACTUALLY finalize electronic design. Yesterday, I ran into a problem with the circuit which rather confused me. Today, I want to focus on getting this template TIA circuit running properly, as to understand what is going on.
-	Time spent:
-	Activities: Rewiring TinkerCAD Circuit, debugging said circuit.
+2026-07-28\
+	Goal: ACTUALLY finalize electronic design. Yesterday, I ran into a problem with the circuit which rather confused me. Today, I want to focus on getting this template TIA circuit running properly, as to understand what is going on.\
+	Time spent:\
+	Activities: Rewiring TinkerCAD Circuit, debugging said circuit.\
 	
-	 Decisions:
-		 D-006: I am reconsidering the usage of the UA741 op-amp, as it seems to be an unfit match for the current application. The supply is 5V, meaning that it falls on the short end of its rated voltage range (~4.5-40V) [7] While it could still be viable, other op-amps such as the OPA381 could be more effective for the task at hand. This would translate into real world implications for bettering our precision and accuracy results when testing our interferometer.
+	 Decisions:\
+		 D-006: I am reconsidering the usage of the UA741 op-amp, as it seems to be an unfit match for the current application. The supply is 5V, meaning that it falls on the short end of its rated voltage range (~4.5-40V) [7] While it could still be viable, other op-amps such as the OPA381 could be more effective for the task at hand. This would translate into real world implications for bettering our precision and accuracy results when testing our interferometer.\
 	
 	
 I ran into many problems while debugging the TinkerCAD circuit to be operational. I based myself off a pre-existing default photodiode circuit template (credit to Tom Igor for the C++ code) and had to retrofit it into the TIA circuit system I will use. However, the amplifier proved to be very tricky to wire. Using my online resources, I had been able to get it in a way as to work in reducing the measured signal, which made the variance in intensity go from about 203 (from 10-213) to only 1 (from 512-513). I spent hours reconfiguring the circuit, testing changes - whether it be in wiring, resistance or capacitances - and using the software's built in voltmeter at different points until I had been able to bring the total variance up to.. 2 (from 0-2). From there, I changed the secondary ground pin from 5 to 3, which didn't work at all. However, once I reversed the polarity of the photodiode arbitrarily, the op-amp system suddenly worked. As much of a fluke this was, my work wasn't finished - about a quarter of the way up, the output values would sharply plateau at about 255, since it seems this was the maximum value the code allowed to output in this configuration (curiously, as of writing, the original version of the code works too). Nonetheless, after some research, I slightly tweaked the code by using the C++ `map `container to assign to a new outputValue variable:
@@ -238,30 +238,30 @@ analogWrite(9, outputValue);
 With that, the transimpendance amplifier circuit was now complete! :) It operates with values ranging from 0-1012, which is vastly better to filter out any noise which would previously have proved problematic.
 
 
-2026-08-01
-	Goal: Further my understanding of Waves & Optics
-	Time spent: 4h20: N/A
-	Activities : I decided to take a Sample Final Exam for the Waves, Optics & Modern Physics course from Dawson College. 
+2026-08-01\
+	Goal: Further my understanding of Waves & Optics\
+	Time spent: 4h20: N/A\
+	Activities : I decided to take a Sample Final Exam for the Waves, Optics & Modern Physics course from Dawson College.\ 
 	This day was not particularly related to the Michaelson Interferometer in of itself, but rather the key concepts governing optics. This is going to be the exact topic of a course set for next semester, and is tangentially related to the project. I found myself with new ideas on how to approach the magnetostriction elements of the project - to prepare myself for the next semester. Doing an actual phase shift related problem is something which, before the interferometer, I had never encountered previously, and helped to understand and derive actual equations for this project. It is recommended check the questions out, they are quite well made :)
 
 
-2026-08-02
-	Goal: Post a devlog! Improve github documentation
-	Time spent:
-	Activities: Updated README.md to contain much more information than prior, as well as specific component listings which go a bit farther into specifics than this document does. Updated this documentation and posted my very first devlog.
+2026-08-02\
+	Goal: Post a devlog! Improve github documentation\
+	Time spent:\
+	Activities: Updated README.md to contain much more information than prior, as well as specific component listings which go a bit farther into specifics than this document does. Updated this documentation and posted my very first devlog.\
 	
-	 Decisions:
-	 D-007: I have decided to opt for a budget Cube beamsplitter option instead of relying on scrap parts from the DVD drive. This is to ensure 50R/50T behavior in the splitter glass. With budget in mind, I have found ~46$ alternatives to the prohibitively expensive Edmunds optics kits, allowing me to acheive much better precision in determining laser wavelength.
-	 D-008: I have opted to use a Nickel wire for my magnetostriction testing. This is because, unlike pure iron, it only expands over field strength increases, and does much more so than iron. It is also relatively easy to source.
+	 Decisions:\
+	 D-007: I have decided to opt for a budget Cube beamsplitter option instead of relying on scrap parts from the DVD drive. This is to ensure 50R/50T behavior in the splitter glass. With budget in mind, I have found ~46$ alternatives to the prohibitively expensive Edmunds optics kits, allowing me to acheive much better precision in determining laser wavelength.\
+	 D-008: I have opted to use a Nickel wire for my magnetostriction testing. This is because, unlike pure iron, it only expands over field strength increases, and does much more so than iron. It is also relatively easy to source.\
 	 
-A great source which helped me derive the equations seen at the start of this document and understand their meaning was the PHYWE magnetostriction document. [8]
+A great source which helped me derive the equations seen at the start of this document and understand their meaning was the PHYWE magnetostriction document. [8]\
 
 Lingering Questions: What advantage could the optical phase shift calculation provide? How exactly does it translate to increased precision for magnetostriction - could there be other formulas which take advantage of it to attain more precise data that I am missing?
 
 2026-08-03
-	Goal: Figure out WHAT I am buying for this project
-	Time spent: 3h11min
-	Activities:
+	Goal: Figure out WHAT I am buying for this project\
+	Time spent: 3h11min\
+	Activities:\
 	1: I started by doing the most expansive research to date on my mirrors. This is because they are one of the only optical components I cannot substitute with parts found in the used DVD drive. Since the beginning of this documentation, I have been eyeing out various mirrors from Edmund's Canada due to concerns about shipping time and optical quality on other websites. However, I have began to move away from this idea, and I think I have found just the match for my project. I researched other websites which could fit my price range while still satisfying my needs and shipping in the allocated time, and found it difficult to be certain while shopping for Canadian only products - maybe not even currently being in Canada, is of no help.
 	
 
@@ -279,13 +279,13 @@ Lingering Questions: What advantage could the optical phase shift calculation pr
 
 2026-08-03 (contd.)
 	
-	Decisions 
-	D-009: I ended up deciding on the THORLabs PFSQ05-03-F01 for my interferometer. This is as the estimated shipping time is much more reasonable, yet the mirror retains the λ/10 flatness found in all THORLabs options. 
+	Decisions \
+	D-009: I ended up deciding on the THORLabs PFSQ05-03-F01 for my interferometer. This is as the estimated shipping time is much more reasonable, yet the mirror retains the λ/10 flatness found in all THORLabs options.\
 	
-2026-08-05
-	Goal: Finish a full parts list for my project.
-	Time spent: 
-	Activities: Buying the mirrors, which costed, 79.48 USD (110.78 CAD as of 2026/08/05) Creating a full parts list for ChatGPT to give feedback and to check personally if I had missed anything. The full parts list is, at this current time, included near the top of the journal. However, Here are my justifications for every purchase:
+2026-08-05\
+	Goal: Finish a full parts list for my project.\
+	Time spent: \
+	Activities: Buying the mirrors, which costed, 79.48 USD (110.78 CAD as of 2026/08/05) Creating a full parts list for ChatGPT to give feedback and to check personally if I had missed anything. The full parts list is, at this current time, included near the top of the journal. However, Here are my justifications for every purchase:\
 
 ---
 1: Beam Splitting Glass
@@ -324,7 +324,13 @@ It is to be known that in our preliminary Tinkercad testing, a greater capacitan
 | Capacitor Set                                                                                                                                                                                            | Justification                                                                                                                                                              | Cost (CAD) |     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --- |
 | **[10x10PCS 1KV High Voltage Ceramic Capacitor Kit \| 100pF 220pF 330pF 470pF 1nF 2.2nF 3.3nF 4.7nF 10nF 22nF](https://www.amazon.ca/gp/product/B0C5SKHXYD)**                                            | Includes a wide variety of different capacitances, allowing me to tweak the circuit to a degree further than what I have theoretically simulated on the Tinkercad website. | 10.99$     |     |
-| **[300pcs 15Values High Voltage Ceramic Disc Capacitor Assortment Kit (1KV 2KV and 3KV) (Capacitor Range : 0.1nF~22nF)](https://www.amazon.ca/XLX-15Values-Voltage-Capacitor-Assortment/dp/B01M3W0SW1)** | Includes an even greater variety, yet comes at a slightly higher cost.                                                                                                     | 14.99$     |     |
+| **[300pcs 15Values High Voltage Ceramic Disc Capacitor Assortment Kit (1KV 2KV and 3KV) (Capacitor Range : 0.1nF~22nF)](https://www.amazon.ca/XLX-15Values-Voltage-Capacitor-Assortment/dp/B01M3W0SW1)** | Includes an even greater variety, yet comes at a slightly higher cost.                                                                                                     | 14.99$     |     | 
+
+
+
+
+
+
 DigiKey sold only individual capacitors, limiting experimentation, which seemed to be, at the cheapest, 4$ per unit, which was far too expensive to even consider. I decided on the first option as it allows for the same range of testing as the other at a lower price point.
 
 5: Photodiode
@@ -418,46 +424,46 @@ With these different boards in consideration, I decided on the Genmitsu 3040 MDF
 
 **Now, the materials list was finally done.**
 
-2026-08-07
-	 Goal: Finish catching up on documentation.
-	 Time spent: 1h0min (37min logged on Stardance)
-	 Activities: Filling in this document with various comparaisons of different items. 
+2026-08-07\
+	 Goal: Finish catching up on documentation.\
+	 Time spent: 1h0min (37min logged on Stardance)\
+	 Activities: Filling in this document with various comparaisons of different items. \
 	Today's global analysis of every item primarily gave me a full global understanding of every part of the project, as I had to now give explanations to the disadvantages and advantages of every option, for every component. Previously, I had justified the components only very briefly, so this gave me a clear picture as to ***what** I am doing, and **how** I will do it. Much of my time was spent indexing all the items, embedding them on this document as a clear demonstration of product research.
 	
 
-2026-08-08
-	Goal: Finish listing components, make final design choices
-	Time spent: 4h37min ( logged on Stardance)
-	Activities: Continuing the item comparaisons for every product, and creating a rough perspective sketch of every component of the Michaelson Interferometer - the overarching system - in action. 
+2026-08-08\
+	Goal: Finish listing components, make final design choices\
+	Time spent: 4h37min ( logged on Stardance)\
+	Activities: Continuing the item comparaisons for every product, and creating a rough perspective sketch of every component of the Michaelson Interferometer - the overarching system - in action. \
 	
-	Decisions
-	 D-010: I decided to rethink how the system works- the mirror not attached to the magnetostriction subsystem will be attached to the moving micrometer and move during the laser wavelength experiment.
+	Decisions\
+	 D-010: I decided to rethink how the system works- the mirror not attached to the magnetostriction subsystem will be attached to the moving micrometer and move during the laser wavelength experiment.\
 
-Previously, I wrongly designed the system to have two fixed mirrors and a photodiode which moves along, perpendicularly to the laser image expanded by the lens, using the photodiode, thinking the math would be the exact same (Spoiler alert - its not). The mirror movement makes the fringes/interference patterns change predictably, but moving along the fringes mechanically along a spherically expanded image is much more complicated to calculate. The equation for determining wavelength with a perpendicularly moving photodiode with an expanded image can be found from Young's Double Slit experiment:
-$$y =  \frac{\lambda \cdot D} d$$ where D is the distance from the source focal plane to the photodiode, d is the separation between virtual sources (what stretches/compresses fringe pattern) and y is the width of one fringe, determined by dividing the distance travelled by the photodiode by the number of peaks (fringes) measured, giving the equation:
-$$ y = \frac{ \Delta x} N $$ (delta x is the distance travelled and N is the number of fringes). [11] Then, we can substitute this into the former equation and isolate for the wavelength, giving the equation
-$$\lambda = \frac{\Delta x \cdot d} {N \cdot D} $$ we are able to measure the change in distance of the photodiode, the distance from focal plane to the photodiode and the number of peaks/fringes. However, there is not a way to find or cancel out the separation of virtual sources, d. Determining this value according to our system's alignment would require using a laser with a known, precise pre-determined wavelength, which goes against the premise of using a DVD drive. It is also to be known that micrometer level changes in alignment of the mirror, laser or beamsplitter can alter this value to the point where measuring wavelength becomes unfeasible using this concept without engineering methods to align each component with maximal precision. In comparaison, the equation for finding the wavelength from fringe signal with a moving mirror is, as stated earlier,
+Previously, I wrongly designed the system to have two fixed mirrors and a photodiode which moves along, perpendicularly to the laser image expanded by the lens, using the photodiode, thinking the math would be the exact same (Spoiler alert - its not). The mirror movement makes the fringes/interference patterns change predictably, but moving along the fringes mechanically along a spherically expanded image is much more complicated to calculate. The equation for determining wavelength with a perpendicularly moving photodiode with an expanded image can be found from Young's Double Slit experiment:\
+$$y =  \frac{\lambda \cdot D} d$$ where D is the distance from the source focal plane to the photodiode, d is the separation between virtual sources (what stretches/compresses fringe pattern) and y is the width of one fringe, determined by dividing the distance travelled by the photodiode by the number of peaks (fringes) measured, giving the equation:\
+$$ y = \frac{ \Delta x} N $$ (delta x is the distance travelled and N is the number of fringes). [11] Then, we can substitute this into the former equation and isolate for the wavelength, giving the equation\
+$$\lambda = \frac{\Delta x \cdot d} {N \cdot D} $$ we are able to measure the change in distance of the photodiode, the distance from focal plane to the photodiode and the number of peaks/fringes. However, there is not a way to find or cancel out the separation of virtual sources, d. Determining this value according to our system's alignment would require using a laser with a known, precise pre-determined wavelength, which goes against the premise of using a DVD drive. It is also to be known that micrometer level changes in alignment of the mirror, laser or beamsplitter can alter this value to the point where measuring wavelength becomes unfeasible using this concept without engineering methods to align each component with maximal precision. In comparaison, the equation for finding the wavelength from fringe signal with a moving mirror is, as stated earlier,\
 $$\lambda = \frac{2d}{\Delta N}$$
-(d is the distance between fringes and ΔN is the number of fringes observed) it not only has less variables needed to precisely keep track of, but we can determine all these values without solving based off a known wavelength value. Therefore, it makes much more sense to use this system, where both mirrors can move - one mechanically, the other based off magnetostriction - for our testing. 
+(d is the distance between fringes and ΔN is the number of fringes observed) it not only has less variables needed to precisely keep track of, but we can determine all these values without solving based off a known wavelength value. Therefore, it makes much more sense to use this system, where both mirrors can move - one mechanically, the other based off magnetostriction - for our testing. \
 
-2026-08-09
-	Goal: Ordering components, finishing up documentation on said components
-	Time spent: 3h9min (1h5min logged on Stardance)
-	Activities: Finally catching up to progress in the document! Ordering the rest of the online components which I cannot easily source physically. I also verified that the logic for the above equations made sense.
+2026-08-09\
+	Goal: Ordering components, finishing up documentation on said components\
+	Time spent: 3h9min (1h5min logged on Stardance)\
+	Activities: Finally catching up to progress in the document! Ordering the rest of the online components which I cannot easily source physically. I also verified that the logic for the above equations made sense.\
 	
-	Decisions
-	D-011: I decided to change the resistor I was considering from the Digikey to the Amazon trimmer option. This is because spending more money to have insulation offers protection to external factors such as dust, sound and parasitic feedback capacitance, making sure that my TIA circuit stays exactly how I want it to be. 
+	Decisions\
+	D-011: I decided to change the resistor I was considering from the Digikey to the Amazon trimmer option. This is because spending more money to have insulation offers protection to external factors such as dust, sound and parasitic feedback capacitance, making sure that my TIA circuit stays exactly how I want it to be. \
 
 **Purchase cost so far: 324.09 CAD** across DigiKey, Amazon and THORLabs. This is good! There are 25.91$ left for extra materials, such as the missing m5 screws, or if I ever need more filament.
 
-2026-08-10
-	Goal: Creating a proper technical drawing for the next devlog to show that the design step of my project is complete.
-	Time spent: 3h06min
-	Activities: I spent much of my time ensuring I got every single measurement precisely by comparing to reference sizes I got through product listings, and compiling them onto a top view technical drawing. Additionally, I used this to begin designing rough mounting brackets I will need to align every part in the interferometer, by knowing where the screws will be. 
+2026-08-10\
+	Goal: Creating a proper technical drawing for the next devlog to show that the design step of my project is complete.\
+	Time spent: 3h06min\
+	Activities: I spent much of my time ensuring I got every single measurement precisely by comparing to reference sizes I got through product listings, and compiling them onto a top view technical drawing. Additionally, I used this to begin designing rough mounting brackets I will need to align every part in the interferometer, by knowing where the screws will be. \
 	
-	Decisions
-	D-012: I decided to include both the screw adjustment system AND the micrometer in the mirror opposite to the diode. This is so I have a way to firmly adjust the mirror in case it is slightly off in terms of angle whilst keeping the precise translation that the micrometer head offers. I decided to put the head on a set of metal rods which act as rails, helping in stability to guide the mirror forward.
-	D-013: I decided to lengthen the supports for the magnetostriction mirror beyond the boundaries of the board. This is because the nickel rod is 20cm long, and therefore, keeping it stable along its length is crucial to mirror alignment.
+	Decisions\
+	D-012: I decided to include both the screw adjustment system AND the micrometer in the mirror opposite to the diode. This is so I have a way to firmly adjust the mirror in case it is slightly off in terms of angle whilst keeping the precise translation that the micrometer head offers. I decided to put the head on a set of metal rods which act as rails, helping in stability to guide the mirror forward.\
+	D-013: I decided to lengthen the supports for the magnetostriction mirror beyond the boundaries of the board. This is because the nickel rod is 20cm long, and therefore, keeping it stable along its length is crucial to mirror alignment.\
 # **Sources for this document 
 (bibliography.md file to be created later)**
 [1]
