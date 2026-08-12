@@ -1,7 +1,7 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
-**Revision 0.2**\
+**Revision 0.2.1**\
 Raoul Salemi\
-This log is accurate as of 11/08/2026, 00:33 AM EST\
+This log is accurate as of 12/08/2026, 12:44 PM EST\
 \
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
@@ -464,6 +464,19 @@ $$\lambda = \frac{2d}{\Delta N}$$
 	Decisions\
 	D-012: I decided to include both the screw adjustment system AND the micrometer in the mirror opposite to the diode. This is so I have a way to firmly adjust the mirror in case it is slightly off in terms of angle whilst keeping the precise translation that the micrometer head offers. I decided to put the head on a set of metal rods which act as rails, helping in stability to guide the mirror forward.\
 	D-013: I decided to lengthen the supports for the magnetostriction mirror beyond the boundaries of the board. This is because the nickel rod is 20cm long, and therefore, keeping it stable along its length is crucial to mirror alignment.\
+
+2026-08-11\
+	Goal: Create a proper bill of materials, begin CAD designs for components of known dimension.\
+	Time spent: 1h09min (44min logged on Stardance)\
+	Activities: \
+	Unexpected thing today - ELABORATE later!!! The aluminium UV protected mirror's shipping failed, cancelling the purchase. (card from different country, exporting from Germany to Canada) and thus we were able to twitch to the silver mirror, which us shipping cost went back to normal for. Therefore, the transmitted power of the mirrors goes up from 82-83% to 95-97%! Parts remain unordered as of now however.\
+	
+	Decisions\
+	D-014: Switching to the silver version of the mirror \
+	D-015:  Using paper as screen... grid paper is the best option. ELABORATE!! Discuss alternatives thought up like MDF, cardboard, PVC etc.\
+
+Traveling for a few days will make it difficult to journal in the coming days. However, I will try.
+
 # **Sources for this document 
 (bibliography.md file to be created later)**
 [1]
