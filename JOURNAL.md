@@ -1,7 +1,7 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
-**Revision 0.2.1**\
+**Revision 0.2.3**\
 Raoul Salemi\
-This log is accurate as of 12/08/2026, 12:44 PM EST\
+This log is accurate as of 12/18/2026, 10:37 PM EST\
 \
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
@@ -106,12 +106,30 @@ $$\Delta \phi = \frac{4\pi \Delta L}{\lambda}$$
 	PETG-CF sufficiently stiff for preliminary testing
 	
 
-
+# **Acronym Legend**
+Please refer to these if acronyms are used to describe components, such as in the project files.\
+**Optical**
+BS: Beamsplitter\
+M1: Mirror 1 (Micrometer mirror)\
+M2: Mirror 2 (Solenoid mirror)\
+PD: Photodiode\
+**Electronics**
+PS: Power Supply\
+NR: Nickel Rod\
+S or SLD:  Solenoid\
+AMP: op-amplifier
+**Mounts**
+BSM: Beamsplitter mount\
+LDM: Laser diode mounting bracket\
+LMB: Lens mounting bracket\
+SMM: Solenoid mirror mount\
+MMM: Micrometer mirror mount\
+PMB: Photodiode mounting bracket\
 # **Parts List**
 
 **Laser Diode, springs:** From DVD Drive
 
-**Mirrors :** 2x Thorlabs PFSQ10-03-P01 
+**Mirrors :** 2x Thorlabs  **[PF05-03-P01](https://www.thorlabs.com/item/PF05-03-P01)**
 
 **Beamsplitter:** Beam Splitter Cube, Optical Glass Dichroic Prism Ratio 50:50 Spectrome Sicence (20mm) ( Amazon) 
 https://www.amazon.ca/gp/product/B0B34FK2GF
@@ -150,7 +168,10 @@ https://www.amazon.ca/gp/product/B000H5OL30
 Anycubic Kobra 3 + Ace Pro 2 
 PETG-CF filament (1kg)
 1kg Laser 190-2000nm protection glasses
-NICE-POWER DC Power Supply Variable 30V 10A Adjustable Switching Regulated High Precision 4-Digits LED Display 5V/2A USB Port Output & Input Power Cord Bench Lab Power Supplies Digital Ditigal Multimeter
+NICE-POWER DC Power Supply Variable 30V 10A Adjustable Switching Regulated High Precision 4-Digits LED Display 5V/2A USB Port Output & Input Power Cord Bench Lab Power Supplies Digital Digital Multimeter
+Soldering kit w/ wire, paste
+
+
 Electric Drill w/ clamps for drilling through the wood board 
 Computer 
 
@@ -290,9 +311,9 @@ Lingering Questions: What advantage could the optical phase shift calculation pr
 ---
 1: Beam Splitting Glass
 
-| Beamsplitter                                                                                                                      | Justification                                                                                                                                                                                                                                                                                                                                                                                                  | Cost (CAD) |
-| --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| **[Beam Splitter Cube, Optical Glass Dichroic Prism Ratio 50:50 Spectrome Sicence](https://www.amazon.ca/gp/product/B0B34FK2GF)** | This item is low cost and fabricated with K8 Cristal, which is a material of sufficient grade for my project. The cheapest size is 20mm, which is more than enough. However, no precise manufacturer details are listed. I posit that it will still be good enough - cube beam splitters are preferred to flat beam splitters in terms of precision in Michaelson interferometer projects and similar optics.  | 43.47$     |
+| Beamsplitter                                                                                                                      | Justification                                                                                                                                                                                                                                                                                                                                                                                                 | Cost (CAD) |
+| --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| **[Beam Splitter Cube, Optical Glass Dichroic Prism Ratio 50:50 Spectrome Sicence](https://www.amazon.ca/gp/product/B0B34FK2GF)** | This item is low cost and fabricated with K8 Cristal, which is a material of sufficient grade for my project. The cheapest size is 20mm, which is more than enough. However, no precise manufacturer details are listed. I posit that it will still be good enough - cube beam splitters are preferred to flat beam splitters in terms of precision in Michaelson interferometer projects and similar optics. | 43.47$     |
 This is frankly the only option I have considered which ships in reasonable time at this price point. Flat beam splitters of this material are available, but cube beam splitters are advantageous for my application. [9]
 
 2: Board kit
@@ -469,13 +490,113 @@ $$\lambda = \frac{2d}{\Delta N}$$
 	Goal: Create a proper bill of materials, begin CAD designs for components of known dimension.\
 	Time spent: 1h09min (44min logged on Stardance)\
 	Activities: \
-	Unexpected thing today - ELABORATE later!!! The aluminium UV protected mirror's shipping failed, cancelling the purchase. (card from different country, exporting from Germany to Canada) and thus we were able to twitch to the silver mirror, which us shipping cost went back to normal for. Therefore, the transmitted power of the mirrors goes up from 82-83% to 95-97%! Parts remain unordered as of now however.\
+	Unexpected thing today - The ThorLABS aluminum UV protected mirrors' shipping failed, cancelling the purchase. (card from different country, exporting from Germany to Canada) and thus we were able to twitch to the silver mirror, which us shipping cost went back to normal for. Therefore, the transmitted power of the mirrors goes up from 82-83% to 95-97%! Parts remain unordered as of now, however.\
 	
 	Decisions\
 	D-014: Switching to the silver version of the mirror \
-	D-015:  Using paper as screen... grid paper is the best option. ELABORATE!! Discuss alternatives thought up like MDF, cardboard, PVC etc.\
+	D-015:  Using paper as screen... grid paper is the best option. ELABORATE!! 
+	
+	Discuss alternatives thought up like MDF, cardboard, PVC etc.\
+	D-016: CAD work will be done in Tinkercad's 3D modeling suite, as to make it easier and faster to block out ready-to-print designs than just about anywhere else, with good topology.
 
 Traveling for a few days will make it difficult to journal in the coming days. However, I will try.
+
+2026-08-12\
+	Goal: Sort mirror situation\
+	Time spent: 1h06min (N/A logging)
+	Activities: Back and forth emails between us and customer service - search for alternative options.\
+	Thorlabs mirrors ordered again, this time, the silver ones, and declined to ship once again - however, this time, it was the silver mirrors. The supplier said we needed to supply from Germany. However, the shipping cost from Germany amounted to 81.55 EUR (130.91$ CAD) which is higher than the cost of the mirrors themselves. While technically not in my budget costs, this would hurt my wallet quite a bit... therefore, I began my search for alternative mirror options. I primarily searched on Amazon, as this website offers a much more reliable shipping framework, making it easier to source. Instead of searching purely for optical grade mirrors, I expanded my search to anything which could fit the needs of a precision mirror.
+
+---
+
+| Product                                                                                                                                                                                                                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Cost (CAD)                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| **[Diameter 114 mm Focal Length 900mm Newtonian Reflector Mirror for Astronomical (D114F900JP)](https://www.amazon.ca/gp/product/B096F28YR6)**                                                                                                | 1/10λ rated surface accuracy and 92% reflectance @400-950nm. However. it is not a flat mirror (900mm focal length) and massive for my project, at 11.4 centimetres in diameter, which will make building mounts extremely tricky.                                                                                                                                                                                                                                                                                             | 71.48$                               |
+| **[20mm Silicon(Si) Laser Reflection Mirrors for CO2 Laser Cutter Engraver/Cutting Engraving Machine, 3 Pcs Dia. 20mm /0.79"](https://www.amazon.ca/gp/product/B08R88TZMJ)**                                                                  | CO2 Laser Cutter Reflection Mirror. At 650nm, the listed uncertainty can be calculated to be about 0.77λ of surface flatness - this is because they are intended for 10.6 micrometer light, and work amazingly in this scenario, but not as much for shorter wavelengths such as the ones we are experimenting with. Other metal options are available but have higher uncertainties.                                                                                                                                         | 55.55$ (8.45$ as of 8/17/2026! wow!) |
+| **[Alpha Nanotech Silica Wafers (Dry Oxide Only; Sizes: 6'', 4'', 2'', Oxide Thickness: 200 nm) (2 inches, Qty: 1 pc)](https://www.amazon.ca/gp/product/B07RFF6XWN)**                                                                         | This is not listed as a mirror, but rather, as a silica wafer. The imprecision translates to about 1/6λ at 650nm, which is great. However, 2 inches of diameter would still require slightly redesigning the mounts. Additionally, the reflectance, at 40%, is rather poor, and could prove to be even lower, meaning lots of power would be lost. This would mean adjusting to higher resistances in the TIA circuit to get the same outputs, which we would do by tuning speed of movement of the mirrors much more finely. | 45.00$                               |
+| **[2PCS Small Size Front Surface Mirrors High Reflectivity for Projectors Scanners Precision Optical Instrument DIY Accessories(10x10mm,2mm)](https://www.amazon.ca/Reflectivity-Projectors-Precision-Instrument-Accessories/dp/B0GB9C66T6)** | First surface mirror which comes in a wide variety of sizes. 97% reflectance (at wavelength unknown) and lack of overall information. Arrives August 25-September 1st, which would absolutely NOT leave enough time to complete the project by September 1st. However, affordable.                                                                                                                                                                                                                                            | 24.65$                               |
+
+``Decisions
+`D-017: ended up **NOT** choosing any for now, as "I am still confident that the ThorLABS mirrors will arrive without too many issues." (Edit 08/17/2026: this aged well...) 
+	The best backup option, as of now, is the Silica wafer, as it offers the level of precision I would need to perform magnetostriction experiments and is possible to use with more resistance in the TIA circuit. If not, looking back at the Edmunds mirrors and going ever so slightly overbudget doesn't seem like a bad option now...
+
+2026-08-13\
+	Goal: Confirm if ThorLABS mirrors are arriving...\
+	Activities: Communication with mirror supplier.\
+	Time spent: N/A\
+	Today, we received a clarification email saying that shipping the silver mirrors from the US, rather than Germany, was possible. This would cut down costs from the aforementioned ridiculous European import price to the earlier US shipping value (equivalent to 49.40 CAD). We replied saying we would like this as an option - after some more payment difficulties, they invited us to directly call their support line. This will be a task for tommorow.\
+
+2026-08-14\
+	Goal: Confirm if ThorLABS mirrors are arriving...\
+	Activities: Calling ThorLABS\
+	Time spent: N/A\
+	At last, it seemed there was a glimmer of hope for sourcing these high precision silver mirrors. When I called ThorLABS' service department, they told us the order had once again not been processed - we agreed to wire transfer directly. This is good, as it should solve issues regarding inconsistency with billing, shipping and card adresses, allowing for a smoother ordering experience for these mirrors.\
+
+2026-08-15\
+	Goal: Restart with project properly to prepare for building\
+	Time spent: N/A\
+	Activities: Unboxing all parts to ensure that they have properly arrived. \
+	Today, I got home and all but four components were at my doorstep. I opened and checked every component to ensure the right materials had arrived. However, three of the items from Amazon had been cancelled. These were the **Lens** (**[DM-WJ002 185 Biological Microscope Objective Lens Silver 10X Achromatic Objectives Lens 160/0.17](https://www.amazon.ca/gp/product/B082P3P953)**), the **Nickel Rod ([SHONAN Nickel Anode- 7.87"x0.3"(Diameter) Nickle Anode, Pure Nickel Bar, Nickel Rod](https://www.amazon.ca/gp/product/B083LJWQYG))** and the **Beamsplitter ([Beam Splitter Cube, Optical Glass Dichroic Prism Ratio 50:50 Spectrome Sicence](https://www.amazon.ca/gp/product/B0B34FK2GF)**). I reordered these components to no issue. However, nothing more was heard of from the ThorLABS support team.
+	this is where all the images go !!!!!
+
+2026-08-16
+	Activities: Disassembling DVD drive to procure laser diode, CAD design work for mounting system
+	Time: 3h32min (2h09min recorded on Stardance)
+	`Decisions\`
+	`D-018: I will favor the usages of rounded, circular edges in my design. This is to reduce stress at corner points and save some material for the many different iterations which are likely to come.`
+	`D-019: I enlarged the beam spliter design from 24x24mm in width to. This is to ensure the beam splitter remains solid. To make the component easier to print, I split it into two different pieces, which are designed to be firmly connected using two M3 screws.`
+	`D-20: The laser diode mount will be designed slightly larger to encompass the metal casing it is placed within, as I am having trouble isolating it. This also required the center level of every other structural bracket to be raised to 22mm, as opposed to 12mm as previously.`
+
+---
+# CAD Design Process
+2026-08-16\
+1) **Micrometer Mirror Mount (MMM)**
+I started by making the micrometer mount first. I largely based myself off the sized already present in my on-paper design initially. I measured some parts of my real micrometer head using a 30cm ruler, then, cross referenced it with blueprints of similar micrometer heads available on **[MiSUMi](https://us.misumi-ec.com/vona2/detail/223006520381/?seriesCode=223006520381&tab=catalog&Page=1)** (on this page.) The 1009-350 very closely matches the design I found on Amazon, so I used its exact measurements to my Tinkercad model off of. I believed by model was 5mm longer, so initially adjusted the design to this difference, however, upon looking back, it appears to be about the same length, too. This will be tested once component 3D printing begins. When making the supports, I stepped away from the original designs just a bit - instead of adding a second micrometer mounting I decided to only extend the top mounting downwards to support the micrometer, saving print material and improving stability of the micrometer. when making the mirror adjustment system, I decided o space the M3 screws further out than previously listed. While the mounting rods didn't directly have a specified spacing away from the screws, they now sit 35mm away from the central axis and 30mm above the ground. The mirror adjustment plates also did not have a specified length - they are now 90mm long (and 41mm tall.) The top micrometer mounting bracket plate is now 145.5mm instead of 145mm. I also added a support to the mirror adjustment plate to guide the mirror into the system.
+![[Helios - MMM01.png|401]]-
+Fig 1. - Tinkercad screenshot of micrometer and mirror 1 mounting systems as of 2026/08/17.
+2) **Beamsplitter Mount (BSM)**
+I had to go back to the drawing board when it comes to this mount. In my technical drawing, the 20x20mm beamsplitter would fit in a 24x24mm holder, meaning the outer walls were 4mm thick - there were also only two outer walls. In this iteration, I made the walls to be 7mm thick, giving a 34x34mm footprint. I also went back to the drawing board regarding the idea that this needed to be a single piece - Separating into two pieces, the beamsplitter bracket and beamsplitter mount, allows me to avoid complications with 90 degree upright angles while 3D printing, ensuring ease of production, while still being remaining to the original technical drawing model. I also added a circular 6mm radius to the outside of the M5 screws in the bracket, as this will slightly save on printing material while keeping the screws firmly guided, and the bracket firmly locked to the plate. I added two smaller 3mm holes to firmly lock the mount and bracket together, too, using either M3 screws or even wooden dowel pins.
+![[Helios - BSM01.png]]
+Fig 1. - Tinkercad screenshot of beamsplitter mounting system as of 2026/08/17.
+3) **Diode Mount (LDM)**
+Due to my previous efforts to isolate the laser diode from it's casing having failed yesterday, I decided to make a part which would incorporate the casing, too. Since the diode would therefore be raised 22mm up - higher than any other component - the standard for height required raising every other mounting platform to account for this difference. This mount is also slightly changed from its technical drawing, as the top-down footprint stayed about the same, but the way the laser diode is incorporated changed quite significantly. I make a hole in the bracket to serve as a guide for the metal component. To hold it in place more firmly, I added an M3 screw hole.
+![[Helios - LDM01.png]]
+Fig 1. - Tinkercad screenshot of diode mounting bracket as of 2026/08/17.
+4) **Lens Mount (LMB)**
+My lens has not actually arrived yet, therefore, I used Amazon size specifications and identified the lens to be a generic DM-WJ002 10X achromatic microscope objective. I searched online yet found no matching CAD model available. To approximate, I used the **[RMS10X10X Olympus Plan Achromat Objective, 0.25 NA, 10.6 mm WD](https://www.thorlabs.com/item/RMS10X)** STEP file from ThorLABS (granted, a much more expensive lens option) and converted it to a .obj file. Despite being broken, it was still meaningful insight on how to set up my actual lens. Eventually, a fixture system will be added, as I am reconsidering the M3 screw hole setup I have used in the diode mount. 
+![[Helios - LMB01.png]]
+Fig 1. - Tinkercad screenshot of lens mounting bracket as of 2026/08/17.
+
+2026-08-17
+	Goal: Finish CAD design elements.\
+	Time spent: 2h23min (logged on Stardance)
+	Activities: continuing CAD modeling, compiling and updating documentation from during and after the break\
+	`Decisions`
+	`D-021: I decided to keep the out of board bracket design in the solenoid brackets. This is as the nickel rod is very long, and needs to be adjusted to the center of mass to not cause any problems involving acoustic vibration.` 
+	In the evening, we received an email from ThorLABS stating that the specific mirror I had purchased, the **[PFSQ05-03-P01](https://www.thorlabs.com/item/PFSQ05-03-P01)** was only in stock overseas. Disregarding the fact that it had not been listed as such in days past, I set out to once again review the list of mirror alternatives. As I did so, I spotted that the **[25mm Silicon(Si) Laser Reflection Mirrors for CO2 Laser Cutter Engraver/Cutting Engraving Machine, 3 Pcs Dia. 25mm /0.98"](https://www.amazon.ca/gp/product/B08R88VRW1)** were set at an 85% discount, and were now selling for 8.45$. I, therefore, rushed to order a set of these mirrors as a backup option, in case the ThorLABS mirrors ended up not arriving. These mirrors, at 650nm, have about a 0.77 λ surface flatness. While not being exactly designed for the wavelengths I need (CO2 laser cutters use wavelengths of about 10.6 micrometers), it was way too good of a deal to simply pass up. These are set to ship on 2026-08-19.
+
+---
+
+# CAD Design (contd.)
+
+5) **Solenoid Mirror Mount (SMM)**
+This is possibly the most complex part of the entire mounting system. I began by modeling the solenoid cover around a to-scale nickel rod - since this item hasn't arrived yet, I can't measure true scale, so I had to use Amazon listing measurements as a reference. This component is likely the most unchanged aspect of the technical drawing. I then built two, smaller separated support brackets as opposed to what is illustrated in the technical drawing -  this is to ensure the solenoid cover and over components remain leveled with respect to the center of mass of the overall system (solenoid, cover, nickel rod, mirror mounting plates). Center of mass is a concept which I had to heavily explore through this system. A balanced center of mass keeps the system from tipping in any way while dampening any surrounding acoustic vibration, keeping everything firmly in place. Therefore, I explored several different mirror mounting designs.\
+![[Helios - SMM01.png]]
+This was the first iteration - a rod rail system with guides in the mount and brackets which would force translation forward. The problem is that the adjustment screws would throw the plates off course in rather difficult to predict ways, and the friction between the PETG-CF and material used for the rails would lead to the uneven surfaces of both materials throwing the mirror off course ever so slightly. When measuring micrometers of change, this is not ideal for measuring the effects of magnetostriction.\
+![[Helios - SMM02.png]]
+This was the second iteration - a non-adjustable mirror mount with a hole fitting neatly with the nickel rod, and another to place the mirror in. This was deemed to not be adjustable enough, as, even with the lack of friction, the inability to adjust the rotation of the mirror precisely was still a major downside. Then, for my third iteration, I envisioned simply gluing the mirror itself to the nickel rod. This was a better idea than the non adjustable mirror mount, saving a few grams, yet it was still not fully optimal.\
+![[Helios - SMM03.png]]
+Here is the iteration i ended up deciding on. I re-introduced the mirror mounting plates, this time, suspended in the air, and cut off a small section of the top to save on material - while incorporating the nickel rod hole from the previous design. This gives the best of both worlds when it comes to stability and adjustability. I decided to add a fictional counterbalance, whose volume will be determined once the mirror mounting system has been properly measured. 
+A way to link the adjustment brackets together would now be great., as the taller one is currently hanging, and the rest of the overall system is very sensitive to changes.
+
+2026-08-18
+	Goal: Catch up on documentation, try out 3dprinting and Arduino starter kit functionality.
+	Time spent: 3h05min (2h32min logged on Stardance)
+	Activities: Sorting out mirrors, successful experiment with Uno R3 kit and DVD drive laser diode, catching up fully on documentation.
+	Today, we were able to call ThorLABS about the mirrors. The payment had gone through, yet, the lead time for importing the **[PFSQ05-03-P01](https://www.thorlabs.com/item/PFSQ05-03-P01)** would about 3 months, which is far too long for my project's needs. Therefore, I considered to change the order to the **[PFSQ05-03-G01](https://www.thorlabs.com/item/PFSQ05-03-G01)** , which has the same dimensions yet is coated with aluminum and performs similarly. However, this item costs more, and therefore needed another wire transfer - increasing shipping time by a matter of 5 days on top of the week expected for international shipping, which would be about August 30th. 2 days of room to work with is still far too few, so I decided that I had to switch to a product of equal or lower price. I considered the **[PFSQ05-03-M03](https://www.thorlabs.com/item/PFSQ05-03-M03)** for its equal price and gold coating. It is technically not meant for the wavelengths I need yet is shown to have 95.71% reflectance (within range of P-01 silver's 95.72%). Finally, I decided on the **[PF05-03-P01](https://www.thorlabs.com/item/PF05-03-P01)** as it is another silver mirror which would perform identically to its former square silver twin which is unavailable in the North American market. It is also of the same dimensions, yet instead, it is cylindrical, meaning I would need to slightly rework the mounts - this however costs 5.70 USD less. It is arriving August 25th. All things considered, this mirror seems like a solid purchase!\
+	Upon opening the Elegoo R3 kit, I found that the resistors were already labeled from 100 to 1M Ohm. This is a pleasant surprise, as an amazon review claimed the product had less than what was advertised - it in fact had more.
+	I then further disassembled the DVD drive down to the raw laser diode, and got the Arduino to successfully power the laser diode! Great news with just a small problem - now, the collimating lens was detached, so the light expands, fast! This means I need to either re-align the DVD drive lens or restructure the design to use the 10X lens to collimate the beam of light, which would be tricky to do precisely. Nevertheless, I'm extremely happy the electronics now work! The CAD for the laser diode will need a redesign, but everything seems to be falling into place rather smoothly, for now. My goal tomorrow is to have a working full design I can submit for a funding request.
+
 
 # **Sources for this document 
 (bibliography.md file to be created later)**
