@@ -24,7 +24,6 @@ In turn, it is therefore possible to measure a **magnetostriction** strength usi
 | Rod | Nickel Rod |
 | Solenoid | Made from Copper Wire |
 | Power Supply | DC Variable Power Supply |
-
 |**Mechanical** | |
 | Micrometer | 0-13mm Micrometer Flat/Ball Head |
 | Adjustment Springs | 6x Recycled from used DVD drive |
