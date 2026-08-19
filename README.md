@@ -11,24 +11,27 @@ In turn, it is therefore possible to measure a **magnetostriction** strength usi
 |  |  |
 |:-------------|:--------------|
 | **Optics** |  |
-| Laser Diode | 640-660nm, Recycled from used DVD drive |
+| Laser Diode | 650-658nm, Recycled from used DVD drive |
 | Beam Splitting Glass | Budget 50:50 Cube Beamsplitter|
-| Mirrors | 2x λ/10 Flatness Protected Silver Square Mirror, 12.7x12.7mm |
+| Mirrors | 2x λ/10 Flatness Protected Silver, Ø1/2" Mirror |
 | Lens | 160/0.17 10X Achromatic Objectives Lens |
 |**Electronics** | |
 | Board | Arduino Uno ATmega328P |
 | Amplifier | MCP601-I/P |
 | Capacitor | 100 pF Capacitor | 
-| Resistor | 100k Ohm 25 Turn Trimmer |
-| Coil | Nickel Wire (tentative) |
+| Photodiode | BPW34 |
+| Resistors | 100kΩ 25 Turn Trimmer + 100Ω Fixed Resistor|
+| Rod | Nickel Rod |
+| Solenoid | Made from Copper Wire |
 | Power Supply | DC Variable Power Supply |
+
 |**Mechanical** | |
 | Micrometer | 0-13mm Micrometer Flat/Ball Head |
-| Adjustment Springs | Recycled from used DVD drive |
-| Screws | 10x Assorted M3, M5, M6 Screws w/Nut & Washers |
+| Adjustment Springs | 6x Recycled from used DVD drive |
+| Screws | 11x Assorted M3, M5 Screws w/Nut & Washers, Heat Insert set |
 | Brackets, mounts | 3D Printed from PETG-CF, 2x thin metal rod |
 |**Miscellaneous** | |
 | Breadboard | Adapted CNC MDF 3040 Spoilboard, 30x36cm |
-| Image Surface | Ground Glass (tentative) |
+| Image Surface | Grid Paper |
 
 Further explanations are in the JOURNAL.md file - I recommend checking it out! 
