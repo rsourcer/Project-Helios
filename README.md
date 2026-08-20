@@ -38,6 +38,29 @@ Fig 1.01: Example of an enlarged fringe image produced by a michaelson interfero
 | Breadboard | Adapted CNC MDF 3040 Spoilboard, 30x36cm |
 | Image Surface | Grid Paper |
 
+# Acronym List:
+
+This is a reference to understand every acronym used
+
+Optical\
+BS: Beamsplitter
+M1: Mirror 1 (Micrometer mirror)
+M2: Mirror 2 (Solenoid mirror)
+PD: Photodiode
+Electronics\
+PS: Power Supply
+NR: Nickel Rod
+S or SLD: Solenoid
+AMP/TIA: Trans-Impendence Amplifier
+Mounts BSM: Beamsplitter mount
+LDM: Laser diode mounting bracket
+LMB: Lens mounting bracket
+SMM: Solenoid mirror mount
+MMM: Micrometer mirror mount
+PMB: Photodiode mounting bracket\
+SPB: Spoilboard
+
+
 Further explanations are in the JOURNAL.md file - I recommend checking it out! 
 
 
