@@ -1,5 +1,5 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
-**Revision 0.2.3**\
+**Revision 0.2.4**\
 Raoul Salemi\
 This log is accurate as of 12/21/2026, 12:18 AM EST\
 \
