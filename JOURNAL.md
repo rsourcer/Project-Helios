@@ -1,7 +1,7 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
 **Revision 0.2.3**\
 Raoul Salemi\
-This log is accurate as of 12/18/2026, 10:37 PM EST\
+This log is accurate as of 12/21/2026, 12:18 AM EST\
 \
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
@@ -598,7 +598,24 @@ A way to link the adjustment brackets together would now be great., as the talle
 	Upon opening the Elegoo R3 kit, I found that the resistors were already labeled from 100 to 1M Ohm. This is a pleasant surprise, as an amazon review claimed the product had less than what was advertised - it in fact had more.
 	I then further disassembled the DVD drive down to the raw laser diode, and got the Arduino to successfully power the laser diode! Great news with just a small problem - now, the collimating lens was detached, so the light expands, fast! This means I need to either re-align the DVD drive lens or restructure the design to use the 10X lens to collimate the beam of light, which would be tricky to do precisely. Nevertheless, I'm extremely happy the electronics now work! The CAD for the laser diode will need a redesign, but everything seems to be falling into place rather smoothly, for now. My goal tomorrow is to have a working full design I can submit for a funding request.
 
+2026-08-19\
+	Goal: Continue CAD modeling, test 3d printer capabilities\
+	Time spent:\
+	Activities: Today, I printed an early iteration of my laser diode mount (LDM). The mouting holes were misaligned (too big), and I ignored tolerances completely, so I tried again. This time, it was better, but still slightly misaligned (too small.) Tolerance, at ~0.5mm, was still too small - on top of that, I added a triangle wedge to ensure the diode would stay in place, but it was flipped by the wrong side.. 
+	I also created the acronym list to further simplify documenting parts in this project later on, making the process less verbose. I made M3 and M5 screw holes bigger in the MMM and LDM to accomodate heat inserts in the future.
 
+	Decisions
+	D-022: I decided that subcomponents in CAD will be named with the convention XXX.0.0, where the first three letters represent the component, the first number represents the iteration and the second number represents the indentifier for the component, based off decreasing order of size, starting from 1 (1 is the biggest dimensionned sub-component). 
+
+2026-08-20\
+	Goal: print a proper component I could use for my project\
+	Time spent:\
+	Activities: Today, I started off by printing the largest part of the MMM. The screws were still ever so slightly misaligned. Furthermore, the grip design for the micrometer was not firm to my liking, and the translation led to unforseen effects. Therefore, I redesigned it by making one of the top arches locked inside the micrometer. To install, I must unscrew the micrometer handle then reinstall after the part is lodged in. I also properly aligned the screws. 3D printing the MMM should be good now - I also slightly redesigned the BSM (note to self: update using Lapse description!)\
+	Very late in the evening, the lens has arrived. I can now make a much more precise lens mount than one based on rough approximations found online. It appears to also be 20mm of radius along the desired mounting surface upon rough opservation (TBD.)
+	
+
+
+2026-08-21\
 # **Sources for this document 
 (bibliography.md file to be created later)**
 [1]
