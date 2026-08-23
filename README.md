@@ -16,7 +16,7 @@ Fig 1.01: Example of an enlarged fringe image produced by a michaelson interfero
 |  |  |
 |:-------------|:--------------|
 | **Optics** |  |
-| Laser Diode | 650-658nm, Recycled from used DVD drive |
+| Laser Diode | Budget 650nm Laser|
 | Beam Splitting Glass | Budget 50:50 Cube Beamsplitter|
 | Mirrors | 2x λ/10 Flatness Protected Silver, Ø1/2" Mirror |
 | Lens | 160/0.17 10X Achromatic Objectives Lens |
@@ -31,9 +31,8 @@ Fig 1.01: Example of an enlarged fringe image produced by a michaelson interfero
 | Power Supply | DC Variable Power Supply |
 |**Mechanical** | |
 | Micrometer | 0-13mm Micrometer Flat/Ball Head |
-| Adjustment Springs | 6x Recycled from used DVD drive |
-| Screws | 11x Assorted M3, M5 Screws w/Nut & Washers, Heat Insert set |
-| Brackets, mounts | 3D Printed from PETG-CF, 2x thin metal rod |
+| Screws | 10x Assorted M3, M5, M6 Screws w/Nut & Washers, Heat Insert set |
+| Brackets, mounts | 3D Printed from PETG-CF |
 |**Miscellaneous** | |
 | Breadboard | Adapted CNC MDF 3040 Spoilboard, 30x36cm |
 | Image Surface | Grid Paper |
