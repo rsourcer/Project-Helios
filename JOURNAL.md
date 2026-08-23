@@ -1,7 +1,7 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
-**Revision 0.2.4**\
+**Revision 0.2.5**\
 Raoul Salemi\
-This log is accurate as of 12/21/2026, 12:18 AM EST\
+This log is accurate as of 23/08/2026, 11:39 AM EST\
 \
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
@@ -613,9 +613,16 @@ A way to link the adjustment brackets together would now be great., as the talle
 	Activities: Today, I started off by printing the largest part of the MMM. The screws were still ever so slightly misaligned. Furthermore, the grip design for the micrometer was not firm to my liking, and the translation led to unforseen effects. Therefore, I redesigned it by making one of the top arches locked inside the micrometer. To install, I must unscrew the micrometer handle then reinstall after the part is lodged in. I also properly aligned the screws. 3D printing the MMM should be good now - I also slightly redesigned the BSM (note to self: update using Lapse description!)\
 	Very late in the evening, the lens has arrived. I can now make a much more precise lens mount than one based on rough approximations found online. It appears to also be 20mm of radius along the desired mounting surface upon rough opservation (TBD.)
 	
-
-
 2026-08-21\
+	Time spent: 7mins
+	Activities: Today, I fixed the mounting alignment for the LMB (removed extra 2 screwholes and lengthened them to fit to the spoilboard), enlarged the laser mount to fit the lens case, and added m3 an adjustment screw on top.\
+	
+2026-08-22\
+	Goal: Start building actual project!
+a
+	One pet peeve of mine was that the photodiode mounting bracket (PBM) is still not built - it is the last thing I need to truly call my design complete. Therefore, I used an online 3D model as a reference to get exact dimensions to make one! While still not the best, it should work to keep the photodiode aligned to the laser. 
+
+	D-023: I decided to scrap the DVD laser diode idea entirely
 # **Sources for this document 
 (bibliography.md file to be created later)**
 [1]
