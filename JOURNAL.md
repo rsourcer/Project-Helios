@@ -1,7 +1,7 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
-**Revision 0.2.5**\
+**Revision 0.2.6**\
 Raoul Salemi\
-This log is accurate as of 23/08/2026, 11:39 AM EST\
+This log is accurate as of 23/08/2026, 6:43 PM EST\
 \
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
