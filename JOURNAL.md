@@ -490,12 +490,12 @@ $$\lambda = \frac{2d}{\Delta N}$$
 2026-08-11\
 	Goal: Create a proper bill of materials, begin CAD designs for components of known dimension.\
 	Time spent: 1h09min (44min logged on Stardance)\
-	Activities: \
-	Unexpected thing today - The ThorLABS aluminum UV protected mirrors' shipping failed, cancelling the purchase. (card from different country, exporting from Germany to Canada) and thus we were able to twitch to the silver mirror, which us shipping cost went back to normal for. Therefore, the transmitted power of the mirrors goes up from 82-83% to 95-97%! Parts remain unordered as of now, however.\
+	Activities: creation of BOM.csv (in Github), weighing options for CAD modeling software
+	- Unexpected thing today - The ThorLABS aluminum UV protected mirrors' shipping failed, cancelling the purchase. (card from different country, exporting from Germany to Canada) and thus we were able to twitch to the silver mirror, which us shipping cost went back to normal for. Therefore, the transmitted power of the mirrors goes up from 82-83% to 95-97%! Parts remain unordered as of now, however.\
 	
 	Decisions\
 	D-014: Switching to the silver version of the mirror \
-	D-015:  Using paper as screen... grid paper is the best option. ELABORATE!! 
+	D-015:  Using paper as screen (grid paper) is the best option. Not only does it save money, but it also offers a coordinate-like grid to properly center, align and calibrate the interferometer. 
 	
 	Discuss alternatives thought up like MDF, cardboard, PVC etc.\
 	D-016: CAD work will be done in Tinkercad's 3D modeling suite, as to make it easier and faster to block out ready-to-print designs than just about anywhere else, with good topology.
@@ -506,7 +506,7 @@ Traveling for a few days will make it difficult to journal in the coming days. H
 	Goal: Sort mirror situation\
 	Time spent: 1h06min (N/A logging)
 	Activities: Back and forth emails between us and customer service - search for alternative options.\
-	Thorlabs mirrors ordered again, this time, the silver ones, and declined to ship once again - however, this time, it was the silver mirrors. The supplier said we needed to supply from Germany. However, the shipping cost from Germany amounted to 81.55 EUR (130.91$ CAD) which is higher than the cost of the mirrors themselves. While technically not in my budget costs, this would hurt my wallet quite a bit... therefore, I began my search for alternative mirror options. I primarily searched on Amazon, as this website offers a much more reliable shipping framework, making it easier to source. Instead of searching purely for optical grade mirrors, I expanded my search to anything which could fit the needs of a precision mirror.
+	- Thorlabs mirrors ordered again, this time, the silver ones, and declined to ship once again - however, this time, it was the silver mirrors. The supplier said we needed to supply from Germany. However, the shipping cost from Germany amounted to 81.55 EUR (130.91$ CAD) which is higher than the cost of the mirrors themselves. While technically not in my budget costs, this would hurt my wallet quite a bit... therefore, I began my search for alternative mirror options. I primarily searched on Amazon, as this website offers a much more reliable shipping framework, making it easier to source. Instead of searching purely for optical grade mirrors, I expanded my search to anything which could fit the needs of a precision mirror.
 
 ---
 
@@ -519,25 +519,25 @@ Traveling for a few days will make it difficult to journal in the coming days. H
 
 ``Decisions
 `D-017: ended up **NOT** choosing any for now, as "I am still confident that the ThorLABS mirrors will arrive without too many issues." (Edit 08/17/2026: this aged well...) 
-	The best backup option, as of now, is the Silica wafer, as it offers the level of precision I would need to perform magnetostriction experiments and is possible to use with more resistance in the TIA circuit. If not, looking back at the Edmunds mirrors and going ever so slightly overbudget doesn't seem like a bad option now...
+	- The best backup option, as of now, is the Silica wafer, as it offers the level of precision I would need to perform magnetostriction experiments and is possible to use with more resistance in the TIA circuit. If not, looking back at the Edmunds mirrors and going ever so slightly overbudget doesn't seem like a bad option now...
 
 2026-08-13\
 	Goal: Confirm if ThorLABS mirrors are arriving...\
 	Activities: Communication with mirror supplier.\
 	Time spent: N/A\
-	Today, we received a clarification email saying that shipping the silver mirrors from the US, rather than Germany, was possible. This would cut down costs from the aforementioned ridiculous European import price to the earlier US shipping value (equivalent to 49.40 CAD). We replied saying we would like this as an option - after some more payment difficulties, they invited us to directly call their support line. This will be a task for tommorow.\
+	- Today, we received a clarification email saying that shipping the silver mirrors from the US, rather than Germany, was possible. This would cut down costs from the aforementioned ridiculous European import price to the earlier US shipping value (equivalent to 49.40 CAD). We replied saying we would like this as an option - after some more payment difficulties, they invited us to directly call their support line. This will be a task for tommorow.\
 
 2026-08-14\
 	Goal: Confirm if ThorLABS mirrors are arriving...\
 	Activities: Calling ThorLABS\
 	Time spent: N/A\
-	At last, it seemed there was a glimmer of hope for sourcing these high precision silver mirrors. When I called ThorLABS' service department, they told us the order had once again not been processed - we agreed to wire transfer directly. This is good, as it should solve issues regarding inconsistency with billing, shipping and card adresses, allowing for a smoother ordering experience for these mirrors.\
+	- At last, it seemed there was a glimmer of hope for sourcing these high precision silver mirrors. When I called ThorLABS' service department, they told us the order had once again not been processed - we agreed to wire transfer directly. This is good, as it should solve issues regarding inconsistency with billing, shipping and card adresses, allowing for a smoother ordering experience for these mirrors.\
 
 2026-08-15\
 	Goal: Restart with project properly to prepare for building\
 	Time spent: N/A\
 	Activities: Unboxing all parts to ensure that they have properly arrived. \
-	Today, I got home and all but four components were at my doorstep. I opened and checked every component to ensure the right materials had arrived. However, three of the items from Amazon had been cancelled. These were the **Lens** (**[DM-WJ002 185 Biological Microscope Objective Lens Silver 10X Achromatic Objectives Lens 160/0.17](https://www.amazon.ca/gp/product/B082P3P953)**), the **Nickel Rod ([SHONAN Nickel Anode- 7.87"x0.3"(Diameter) Nickle Anode, Pure Nickel Bar, Nickel Rod](https://www.amazon.ca/gp/product/B083LJWQYG))** and the **Beamsplitter ([Beam Splitter Cube, Optical Glass Dichroic Prism Ratio 50:50 Spectrome Sicence](https://www.amazon.ca/gp/product/B0B34FK2GF)**). I reordered these components to no issue. However, nothing more was heard of from the ThorLABS support team.
+	- Today, I got home and all but four components were at my doorstep. I opened and checked every component to ensure the right materials had arrived. However, three of the items from Amazon had been cancelled. These were the **Lens** (**[DM-WJ002 185 Biological Microscope Objective Lens Silver 10X Achromatic Objectives Lens 160/0.17](https://www.amazon.ca/gp/product/B082P3P953)**), the **Nickel Rod ([SHONAN Nickel Anode- 7.87"x0.3"(Diameter) Nickle Anode, Pure Nickel Bar, Nickel Rod](https://www.amazon.ca/gp/product/B083LJWQYG))** and the **Beamsplitter ([Beam Splitter Cube, Optical Glass Dichroic Prism Ratio 50:50 Spectrome Sicence](https://www.amazon.ca/gp/product/B0B34FK2GF)**). I reordered these components to no issue. However, nothing more was heard of from the ThorLABS support team.
 	this is where all the images go !!!!!
 
 2026-08-16
@@ -591,38 +591,70 @@ Here is the iteration i ended up deciding on. I re-introduced the mirror mountin
 A way to link the adjustment brackets together would now be great., as the taller one is currently hanging, and the rest of the overall system is very sensitive to changes.
 
 2026-08-18
-	Goal: Catch up on documentation, try out 3dprinting and Arduino starter kit functionality.
-	Time spent: 3h05min (2h32min logged on Stardance)
-	Activities: Sorting out mirrors, successful experiment with Uno R3 kit and DVD drive laser diode, catching up fully on documentation.
-	Today, we were able to call ThorLABS about the mirrors. The payment had gone through, yet, the lead time for importing the **[PFSQ05-03-P01](https://www.thorlabs.com/item/PFSQ05-03-P01)** would about 3 months, which is far too long for my project's needs. Therefore, I considered to change the order to the **[PFSQ05-03-G01](https://www.thorlabs.com/item/PFSQ05-03-G01)** , which has the same dimensions yet is coated with aluminum and performs similarly. However, this item costs more, and therefore needed another wire transfer - increasing shipping time by a matter of 5 days on top of the week expected for international shipping, which would be about August 30th. 2 days of room to work with is still far too few, so I decided that I had to switch to a product of equal or lower price. I considered the **[PFSQ05-03-M03](https://www.thorlabs.com/item/PFSQ05-03-M03)** for its equal price and gold coating. It is technically not meant for the wavelengths I need yet is shown to have 95.71% reflectance (within range of P-01 silver's 95.72%). Finally, I decided on the **[PF05-03-P01](https://www.thorlabs.com/item/PF05-03-P01)** as it is another silver mirror which would perform identically to its former square silver twin which is unavailable in the North American market. It is also of the same dimensions, yet instead, it is cylindrical, meaning I would need to slightly rework the mounts - this however costs 5.70 USD less. It is arriving August 25th. All things considered, this mirror seems like a solid purchase!\
-	Upon opening the Elegoo R3 kit, I found that the resistors were already labeled from 100 to 1M Ohm. This is a pleasant surprise, as an amazon review claimed the product had less than what was advertised - it in fact had more.
-	I then further disassembled the DVD drive down to the raw laser diode, and got the Arduino to successfully power the laser diode! Great news with just a small problem - now, the collimating lens was detached, so the light expands, fast! This means I need to either re-align the DVD drive lens or restructure the design to use the 10X lens to collimate the beam of light, which would be tricky to do precisely. Nevertheless, I'm extremely happy the electronics now work! The CAD for the laser diode will need a redesign, but everything seems to be falling into place rather smoothly, for now. My goal tomorrow is to have a working full design I can submit for a funding request.
+	Goal: Catch up on documentation, try out 3dprinting and Arduino starter kit functionality.\
+	Time spent: 3h05min (2h32min logged on Stardance)\
+	Activities: Sorting out mirrors, successful experiment with Uno R3 kit and DVD drive laser diode, catching up fully on documentation.\
+	- Today, we were able to call ThorLABS about the mirrors. The payment had gone through, yet, the lead time for importing the **[PFSQ05-03-P01](https://www.thorlabs.com/item/PFSQ05-03-P01)** would about 3 months, which is far too long for my project's needs. Therefore, I considered to change the order to the **[PFSQ05-03-G01](https://www.thorlabs.com/item/PFSQ05-03-G01)** , which has the same dimensions yet is coated with aluminum and performs similarly. However, this item costs more, and therefore needed another wire transfer - increasing shipping time by a matter of 5 days on top of the week expected for international shipping, which would be about August 30th. 2 days of room to work with is still far too few, so I decided that I had to switch to a product of equal or lower price. I considered the **[PFSQ05-03-M03](https://www.thorlabs.com/item/PFSQ05-03-M03)** for its equal price and gold coating. It is technically not meant for the wavelengths I need yet is shown to have 95.71% reflectance (within range of P-01 silver's 95.72%). Finally, I decided on the **[PF05-03-P01](https://www.thorlabs.com/item/PF05-03-P01)** as it is another silver mirror which would perform identically to its former square silver twin which is unavailable in the North American market. It is also of the same dimensions, yet instead, it is cylindrical, meaning I would need to slightly rework the mounts - this however costs 5.70 USD less. It is arriving August 25th. All things considered, this mirror seems like a solid purchase! Unfortunately, the failed shortly after being made, so things fell through.\
+	- Upon opening the Elegoo R3 kit, I found that the resistors were already labeled from 100 to 1M Ohm. This is a pleasant surprise, as an amazon review claimed the product had less than what was advertised - it in fact had more.
+	- I then further disassembled the DVD drive down to the raw laser diode, and got the Arduino to successfully power the laser diode! Great news with just a small problem - now, the collimating lens was detached, so the light expands, fast! This means I need to either re-align the DVD drive lens or restructure the design to use the 10X lens to collimate the beam of light, which would be tricky to do precisely. Nevertheless, I'm extremely happy the electronics now work! The CAD for the laser diode will need a redesign, but everything seems to be falling into place rather smoothly, for now. My goal tomorrow is to have a working full design I can submit for a funding request.
 
 2026-08-19\
 	Goal: Continue CAD modeling, test 3d printer capabilities\
 	Time spent:\
-	Activities: Today, I printed an early iteration of my laser diode mount (LDM). The mouting holes were misaligned (too big), and I ignored tolerances completely, so I tried again. This time, it was better, but still slightly misaligned (too small.) Tolerance, at ~0.5mm, was still too small - on top of that, I added a triangle wedge to ensure the diode would stay in place, but it was flipped by the wrong side.. 
-	I also created the acronym list to further simplify documenting parts in this project later on, making the process less verbose. I made M3 and M5 screw holes bigger in the MMM and LDM to accomodate heat inserts in the future.
-
+	Activities: work on LDM and MMM components
+	- Today, I printed an early iteration of my laser diode mount (LDM). The mounting holes were misaligned (too big), and I ignored tolerances completely, so I tried again. This time, it was better, but still slightly misaligned (too small.) Tolerance, at ~0.5mm, was still too small - on top of that, I added a triangle wedge to ensure the diode would stay in place, but it was flipped by the wrong side.. 
+	- I created the acronym list to further simplify documenting parts in this project later on, making the process less verbose. I made M3 and M5 screw holes bigger in the MMM and LDM to acommodate heat inserts in the future.
+	
 	Decisions
 	D-022: I decided that subcomponents in CAD will be named with the convention XXX.0.0, where the first three letters represent the component, the first number represents the iteration and the second number represents the indentifier for the component, based off decreasing order of size, starting from 1 (1 is the biggest dimensionned sub-component). 
 
+I bought three new items today. Here are the items I bought and my justifications for each one. Not much comparaisons were made, as I generally simply bought the cheapest available listing on Amazon. These were the **[Glarks 7Pcs 1.5/2/2.5/3.2/4.1/5/6.6mm Soldering Tips Sets, with 1 Set Heat Set Insert Tool, 130pcs](https://www.amazon.ca/dp/B0F8GT8PH1)** heat insert kit, the **[520PCS Hex Bolts Nuts Washers Combination Kit, 304 Stainless Steel, Metric M3 M4 M5 M6 Hex Nuts and Bolts, Full Thread Mechanical Screws, 12 Commonly Used Sizes](https://www.amazon.ca/dp/B0GCRDQ8RG)** screwing set and the **[Laser Diode Module 650nm 5mw Red Diodes 2Pack(Dot)](https://www.amazon.ca/Qiaoba-Laser-Diode-Module-Diodes/dp/B07L416LV1)**
+
+| Item                                                                                                                                                                                                        | Justification                                                                                                                                                                                                                   | Price (CAD)                             |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| **[Glarks 7Pcs 1.5/2/2.5/3.2/4.1/5/6.6mm Soldering Tips Sets, with 1 Set Heat Set Insert Tool, 130pcs](https://www.amazon.ca/dp/B0F8GT8PH1)**                                                               | A heat insert kit could prove very useful in finely inserting the screws in my 3D print mounts, reducing room for miniature movements due to the nature of imprecision brought on by 3D printing.                               | 7.43$ (70% sale, regular price: 24.99$) |
+| **[520PCS Hex Bolts Nuts Washers Combination Kit, 304 Stainless Steel, Metric M3 M4 M5 M6 Hex Nuts and Bolts, Full Thread Mechanical Screws, 12 Commonly Used Sizes](https://www.amazon.ca/dp/B0GCRDQ8RG)** | Essential to the assembly of my project. Wide variety of screws enabling me to mount every component to my spoilboard in a modular manner.                                                                                      | 20.79$ (6% sale, regular price: 22.09$) |
+| **[Laser Diode Module 650nm 5mw Red Diodes 2Pack(Dot)](https://www.amazon.ca/Qiaoba-Laser-Diode-Module-Diodes/dp/B07L416LV1)**                                                                              | Backup option to the DVD drive diodes. A sure fire way to reliably test my interferometry platform with a pre-determined, known value and much easier mounting accessibility than the DVD drive laser and it's associated lens. | 8.95$                                   |
+In total, adding these items brings my total cost to 349.15$. A little scary, as it gives almost no headroom for additional components, but I posit that this will not be of much issue, as no more components need to be bought (and hope that this isn't foreshadowing).
 2026-08-20\
-	Goal: print a proper component I could use for my project\
+	Goal: start printing proper components I could use for my project\
 	Time spent:\
-	Activities: Today, I started off by printing the largest part of the MMM. The screws were still ever so slightly misaligned. Furthermore, the grip design for the micrometer was not firm to my liking, and the translation led to unforseen effects. Therefore, I redesigned it by making one of the top arches locked inside the micrometer. To install, I must unscrew the micrometer handle then reinstall after the part is lodged in. I also properly aligned the screws. 3D printing the MMM should be good now - I also slightly redesigned the BSM (note to self: update using Lapse description!)\
-	Very late in the evening, the lens has arrived. I can now make a much more precise lens mount than one based on rough approximations found online. It appears to also be 20mm of radius along the desired mounting surface upon rough opservation (TBD.)
-	
+	Activities: Today, I started off by printing the largest part of the MMM. The screws were still ever so slightly misaligned. Furthermore, the grip design for the micrometer was not firm to my liking, and the translation led to unforeseen effects. Therefore, I redesigned it by making one of the top arches locked inside the micrometer. To install, I must unscrew the micrometer handle then reinstall after the part is lodged in. I also properly aligned the screws. 3D printing the MMM should be good now (final: MMM.05.X.stl) - I also slightly redesigned the BSM (note to self: update using Lapse description!)\
+	Very late in the evening, the lens has arrived. I can now make a much more precise lens mount than one based on rough approximations found online. It appears to also be 28mm along the desired mounting surface upon rough observation.
+	To log my progress, I have switched to GitHub as to insert images more easily.
+
 2026-08-21\
-	Time spent: 7mins
-	Activities: Today, I fixed the mounting alignment for the LMB (removed extra 2 screwholes and lengthened them to fit to the spoilboard), enlarged the laser mount to fit the lens case, and added m3 an adjustment screw on top.\
+	Time spent: 7mins\
+	Goal: print LMB\
+	Activities: Small day. Today, I fixed the mounting alignment for the LMB (removed extra 2 screwholes and lengthened them to fit to the spoilboard), enlarged the laser mount to fit the lens case, and added m3 an adjustment screw on top. I published this LMB to Github (LMB01.stl). Unfortunately, the lens was NOT compatible with my mount. I found that the casing expands from the bottom to top, from a size of 28mm to 30mm - something I did not account for. \
 	
 2026-08-22\
-	Goal: Start building actual project!
-a
-	One pet peeve of mine was that the photodiode mounting bracket (PBM) is still not built - it is the last thing I need to truly call my design complete. Therefore, I used an online 3D model as a reference to get exact dimensions to make one! While still not the best, it should work to keep the photodiode aligned to the laser. 
+	Goal: Start building actual project! (integrating components onto spoilboard)
+	Activities: Drilling to enlarge MMM mounting holes and make holes in lens casing using diamond drill grinding bit. 3D CAD modeling work, 
+	Time spent:
+	- I spent the morning drilling into the MMM micrometer mounting hole. Despite being posted as a final version, the hole for the micrometer is actually slightly too small, and required being expanded to lodge the bottom portion of the instrument within it. In the beginning, I was using a drill and spare 1cm radius diamond drill grinding bits sourced from the online website Temu a rather long time ago. Unfortunately, I was unable to find exactly which set I had used for this reason. It also was wobbling inside of the drill as it was held by the chuck. Luckily though, it still worked! I was able to fully lodge the micrometer inside of the custom 3D printed casing. One small drawback - while recording the drilling process for Stardance, I had completely cracked my phone case from the flying bits of PETG-CF created by the drilling. This was an absolute wakeup call to use my safety glasses. Highly reccomend!
+	- I also drilled the 10X lens' casing to create an opening for the red laser's light to pass through. Initially, I was using the same diamond drill bits, but later decided to switch to a speed step drill bit. This solved the wobbling issue and led to me making two uniform, clean holes both of the lens casing cover pieces. The semi-transparent plastic piece was by far harder to drill into, however - it felt much more brittle and prone to chipping. Thankfully, it did not pose any of such issues.
+	- I reprinted the LMB by enlarging the hole from 28mm to 30mm (LMB02.stl).
+	- Today, the bulk of my missing parts arrived. These were the long-awaited ThorLABS silvered mirrors, laser diode set, screwing set and heat insert kit. Now, the only components I am missing are the nickel rod and the beamsplitter. 
+	- One pet peeve of mine was that the photodiode mounting bracket (PBM) was still not built - it is the last thing I need to truly call my design complete. Therefore, I used an online 3D model as a reference to get exact dimensions to make one! While still not the best, it should work to keep the photodiode aligned to the laser. 
+	- I ended up 3D printing the minor components in the MMM crucial to the mirror adjustment system (MMM05.2.stl and MMM05.3.stl). I realized that the screwholes in MMM05.2.stl were printed slightly wrong - on one of the sides, the holes seemed to be almost closed off. This is due to printer error. The physical components found within those files will be referred to as MMM05.2 and MMM05.3 to avoid confusion.
+	
+	Decisions:
+	D-023: I decided to scrap the DVD laser diode idea entirely. This is because adjusting the lens to perfectly align to the diode is required for a straight beam, and therefore, I would need to redesign the laser diode mount in a much more adjustable, complicated manner. The alternative option is simply to create a cylindrical hole to insert the already received and working laser diode I have anyway - a much simpler solution.
 
-	D-023: I decided to scrap the DVD laser diode idea entirely
+2026-08-23\
+	Goal: Continue assembly of mounts onto the actual breadboard!\
+	Time spent:\
+	Activities: Fixing MMM05.03's print, catching up on documentation, 
+	- I used a 1/8 drill bit to open the closed off holes in MMM05.03. It was now perfectly compatible for the insertion of M3 screws.
+	- I found that the springs from my DVD drive are wholly incompatible with M3 screws, as they are far too small.
+	- For every hole in MMM05.03, I used M3x30mm screws which I fixed to this aforementioned mount. a flat washer, lock washer and nut to hold the screw in place. To mount MMM05.02, I used a nut followed by a lock washer on the left side and another nut on the right, securing it in place. 
+	- I reworked the SMB (SMB01.X.stl) to include screws to stabilize the solenoid cover (SMB.01.2.stl). Previously, a cylindrical hole was the only thing keeping the solenoid cover in place, and the rear bracket (SMB01.1.stl) simply had free motion, which is horrible for our testing for rather self explanatory reasons? If not, I'll explain - we are measuring changes in the metal rod of only a few nanometers. If anything slightly impacts the rod or the bracket, the whole mirror system would become completely misaligned. Now, I am able to firmly hold the cover and the rear bracket in place.
+	- I tweaked the file structure of all cad files to show which are iterations and which are final designs. This is to make the structure as straightforward as possible.
+	
+	Decisions:
+	D-024: I decided to scrap the idea of using DVD drive springs to finely adjust the mirror mounts. This is because they are wholly incompatible with my present systems (too narrow AND too short), meaning I would have to either magically enlarge them, find a way to source new springs, or find an alternative which still allows me to firmly mount the two plates using the screws, locks and washers which are currently at my disposal. For now, I am choosing the latter option.
+	D-025: In the Github, iterations (unfinished versions of the CAD designs) and final (complete versions of the CAD designs) files will be separated in two distinct folders.
 # **Sources for this document 
 (bibliography.md file to be created later)**
 [1]
@@ -668,3 +700,7 @@ ibid, 4.
 [11]
 
 D. E. Vasquez, “Young’s Double-Slit Experiment Explained Explained,” Mar. 2026. Accessed: Aug. 08, 2026. [Online]. Available: https://physicsfundamentals.org/blog/youngs-double-slit-experiment
+
+[12]
+
+ibid, 4.
