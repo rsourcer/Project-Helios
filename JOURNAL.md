@@ -495,9 +495,8 @@ $$\lambda = \frac{2d}{\Delta N}$$
 	
 	Decisions\
 	D-014: Switching to the silver version of the mirror \
-	D-015:  Using paper as screen (grid paper) is the best option. Not only does it save money, but it also offers a coordinate-like grid to properly center, align and calibrate the interferometer. 
+	D-015:  Using paper as screen (grid paper) is the best option. Not only does it save money, but it also offers a coordinate-like grid to properly center, align and calibrate the interferometer. It also offers great laser fringe clarity with respect to some other alternatives I considered, such as MDF, cardboard or PVC.
 	
-	Discuss alternatives thought up like MDF, cardboard, PVC etc.\
 	D-016: CAD work will be done in Tinkercad's 3D modeling suite, as to make it easier and faster to block out ready-to-print designs than just about anywhere else, with good topology.
 
 Traveling for a few days will make it difficult to journal in the coming days. However, I will try.
