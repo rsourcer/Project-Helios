@@ -1,15 +1,15 @@
 Item Name,Qty,Price (CAD),Item link,Notes
-Thorlabs PFSQ10-03-P01,2,$102.85,https://www.thorlabs.com/item/PF05-03-P01,"?/10 surface flatness, ?1/2"" Protected Silver Mirror with 97% Reflectance @450nm. This item is priced in USD at 36.89 USD per mirror, so the Canadian price is accurate as of 11/08/2026. Shipping costs apply (35.45 USD -> $49.40)"
+Thorlabs PFSQ10-03-P01,2,$102.85,https://www.thorlabs.com/item/PF05-03-P01,"?/10 surface flatness, Ø1/2"" Protected Silver Mirror with 97% Reflectance @450nm. This item is priced in USD at 36.89 USD per mirror, so the Canadian price is accurate as of 11/08/2026. Shipping costs apply (35.45 USD -> $49.40)"
 "Beam Splitter Cube, Optical Glass Dichroic Prism Ratio 50:50 Spectrome Sicence",1,$43.47,https://www.amazon.ca/gp/product/B0B34FK2GF,K8 Cristal Cube Beamsplitter.
 ELEGOO UNO Project Basic Starter Kit with Tutorial and UNO R3 | Compatible with Arduino IDE ,1,$29.99,https://www.amazon.ca/gp/product/B0834W2NKQ,ELEGOO Arduino UNO R3 board including jumper cables and spare resistors.
 10x10PCS 1KV High Voltage Ceramic Capacitor Kit | 100pF 220pF 330pF 470pF 1nF 2.2nF 3.3nF 4.7nF 10nF 22nF ,1,$10.99,https://www.amazon.ca/gp/product/B0C5SKHXYD,"Capacitor Kit with 10 sets of 10 capacitors, ranging from 100pF to 22nF."
 MCP601-I/P,3,$2.94,https://www.digikey.ca/en/products/detail/microchip-technology/MCP601-I-P/305930,Op-Amp with single rail 2.7-6V support - all used pins match to the IC 741. DigiKey products are subject to 15$ shipping cost for both items as they amount to under 100$ CAD in purchases.
 BPW34,2,$5.78,https://www.digikey.ca/en/products/detail/ams-osram-ag/BPW34/607274,"Photodiode rated for 850nm, 20ns. DigiKey products are subject to 15$ shipping cost for both items as they amount to under 100$ CAD in purchases."
 uxcell 10Piece 3296W-104 100K Ohm Trimmer Pot Cermet Potentiometer | Variable Resistors,1,$12.50,https://www.amazon.ca/gp/product/B00D2JRALS,"10x set of 25 turn, 100k Ohm Trimmers."
-"Inside Micrometer, 0-13mm Micrometer Flat/Ball Head",1,$18.67,https://www.amazon.ca/gp/product/B083KHFKZ6,0-13ñ0.01mm Micrometer Head 
+"Inside Micrometer, 0-13mm Micrometer Flat/Ball Head",1,$18.67,https://www.amazon.ca/gp/product/B083KHFKZ6,0-13±0.01mm Micrometer Head 
 DM-WJ002 185 Biological Microscope Objective Lens Silver 10X Achromatic Objectives Lens 160/0.17,1,$21.96,https://www.amazon.ca/gp/product/B082P3P953,10X Aluminium Achromatic Objective Lens.
 "Genmitsu 3040 MDF Spoilboard, Work with 3040 Y-Axis Extension Kit, 3018 CNC Upgraded Accessories Compatible with Most 3018, 3018-PRO/ 3018-MX3, 30 x 36 x 1.5cm (11.8'' x 14.1'' x 0.6'')",1,$29.74,https://www.amazon.ca/Genmitsu-Spoilboard-Extension-Accessories-Compatible/dp/B08VN6HXPD,30x36cm M5-6 compatible Spoilboard. Product is on sale as of 11/08/2026 and was ordered for this price. Usual price is 34.99$ CAD.
-"SHONAN Nickel Anode- 7.87""x0.3""(Diameter) Nickle Anode, Pure Nickel Bar, Nickel h Rod for Nickel Electroplating Solution, 3.4oz 99.6%",1,$23.10,https://www.amazon.ca/gp/product/B083LJWQYG,"7.87""x0.3"" 99.6% Solid Nickel Rod."
+"SHONAN Nickel Anode- 7.87""x0.3""(Diameter) Nickle Anode, Pure Nickel Bar, Nickel Rod for Nickel Electroplating Solution, 3.4oz 99.6%",1,$23.10,https://www.amazon.ca/gp/product/B083LJWQYG,"7.87""x0.3"" 99.6% Solid Nickel Rod."
 123109-18GA Copper Wire 25FT 14LB,1,$9.99,https://www.amazon.ca/gp/product/B000H5OL30,25 FT Polished Copper Wire. Product is on sale as of 11/08/2026 and was ordered for this price. Usual price is 11.99$ CAD.
 Laser Diode Module 650nm 5mw Red Diodes 2Pack(Dot),1,$8.95,https://www.amazon.ca/Qiaoba-Laser-Diode-Module-Diodes/dp/B07L416LV1,650nm Red Laser Diode (2 pack). 
 "520PCS Hex Bolts Nuts Washers Combination Kit, 304 Stainless Steel, Metric M3 M4 M5 M6 Hex Nuts and Bolts, Full Thread Mechanical Screws, 12 Commonly Used Sizes",1,$20.79,https://www.amazon.ca/dp/B0GCRDQ8RG,"520 pcs set of assorted Hex Bolts, Lock/Flat Washers and Nuts ranging from M3-M6, length from 10mm-40mm. Product is on sale as of 23/08/2026 and was ordered for this price. Usual price is 22.09$ CAD."
@@ -20,9 +20,9 @@ Shipping (THORLabs),,$49.40 ,,
 ,,,,
 ,,,,
 ,,,,
-Price before shipping costs (CAD):,$349.15,,,
-Total Price (CAD),$413.55 ,,,
-,,,,
+Price before shipping costs (CAD):,$341.72,,,
+Subtotal (CAD):,$406.12 ,,,
+Price after sales tax (CAD):,$467.04 ,,,
 ,,,,
 ,,,,
 ,,,,
