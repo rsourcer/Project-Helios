@@ -1,7 +1,7 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
-**Revision 0.2.6**\
+**Revision 0.3.0**\
 Raoul Salemi\
-This log is accurate as of 23/08/2026, 6:43 PM EST\
+This log is accurate as of 13/09/2026, 11:29 PM EST\
 \
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
@@ -543,7 +543,7 @@ Traveling for a few days will make it difficult to journal in the coming days. H
 	Activities: Disassembling DVD drive to procure laser diode, CAD design work for mounting system
 	Time: 3h32min (2h09min recorded on Stardance)
 	`Decisions\`
-	`D-018: I will favor the usages of rounded, circular edges in my design. This is to reduce stress at corner points and save some material for the many different iterations which are likely to come.`
+	`D-018: I will favor the usages of rounded, filleted edges in my design. This is since fillets offer better stress concentration relief and allow to save some material for the many different iterations which are likely to come.`
 	`D-019: I enlarged the beam spliter design from 24x24mm in width to. This is to ensure the beam splitter remains solid. To make the component easier to print, I split it into two different pieces, which are designed to be firmly connected using two M3 screws.`
 	`D-20: The laser diode mount will be designed slightly larger to encompass the metal casing it is placed within, as I am having trouble isolating it. This also required the center level of every other structural bracket to be raised to 22mm, as opposed to 12mm as previously.`
 
@@ -643,17 +643,169 @@ In total, adding these items brings my total cost to 349.15$. A little scary, as
 
 2026-08-23\
 	Goal: Continue assembly of mounts onto the actual breadboard!\
-	Time spent:\
+	Time spent: 2h10min logged on Stardance
 	Activities: Fixing MMM05.03's print, catching up on documentation, 
 	- I used a 1/8 drill bit to open the closed off holes in MMM05.03. It was now perfectly compatible for the insertion of M3 screws.
 	- I found that the springs from my DVD drive are wholly incompatible with M3 screws, as they are far too small.
 	- For every hole in MMM05.03, I used M3x30mm screws which I fixed to this aforementioned mount. a flat washer, lock washer and nut to hold the screw in place. To mount MMM05.02, I used a nut followed by a lock washer on the left side and another nut on the right, securing it in place. 
-	- I reworked the SMB (SMB01.X.stl) to include screws to stabilize the solenoid cover (SMB.01.2.stl). Previously, a cylindrical hole was the only thing keeping the solenoid cover in place, and the rear bracket (SMB01.1.stl) simply had free motion, which is horrible for our testing for rather self explanatory reasons? If not, I'll explain - we are measuring changes in the metal rod of only a few nanometers. If anything slightly impacts the rod or the bracket, the whole mirror system would become completely misaligned. Now, I am able to firmly hold the cover and the rear bracket in place.
+	- I reworked the SMB (SMB01.X.stl) to include screws to stabilize the solenoid cover (SMB.01.2.stl). Previously, a cylindrical hole was the only thing keeping the solenoid cover in place, and the rear bracket (SMB01.1.stl) simply had free motion, which is horrible for our testing for rather self explanatory reasons? If not, I'll explain - we are measuring changes in the metal rod of only a few nanometers. If anything slightly impacts the rod or the bracket, the whole mirror system would become completely misaligned. Now, I am able to firmly hold the cover and the rear bracket in place. However, when printing it with the preset orientation, the print completely failed, leaving a mess of PETG filament all around. Now, I have rotated the model 90 degrees along the x axis using the Anycubic app.
 	- I tweaked the file structure of all cad files to show which are iterations and which are final designs. This is to make the structure as straightforward as possible.
 	
 	Decisions:
 	D-024: I decided to scrap the idea of using DVD drive springs to finely adjust the mirror mounts. This is because they are wholly incompatible with my present systems (too narrow AND too short), meaning I would have to either magically enlarge them, find a way to source new springs, or find an alternative which still allows me to firmly mount the two plates using the screws, locks and washers which are currently at my disposal. For now, I am choosing the latter option.
 	D-025: In the Github, iterations (unfinished versions of the CAD designs) and final (complete versions of the CAD designs) files will be separated in two distinct folders.
+
+I am currently rather concerned about finalizing the project on the September 1st goal date, as the beamsplitter is expected to arrive from August 25-28th, leaving me with only a few days of real testing.
+
+2026-08-24\
+	Goal: Continue 3D printing and mounting to the spoilboard\
+	Time spent: 1h14min logged on Stardance\
+	- Today, I printed the SMB, and assembled it onto my spoilboard. This took a surprising amount of time, as the tolerances for the main adjustment bracket screws seem to not have been accounted for. However, this made my brackets despicably firmly attached, which isn't necessarily a bad thing.  The screws linking the solenoid cover to the  adjustment brackets were also very firm despite tolerance being accounted for (M4 screws and 4.20mm hole), though I suspect my 3D printer was a slight cause for this unexpected attribute. However, the mirror mounting system's screwholes were simply too small for their M3 screws, as in this case, tolerance was AGAIN not accounted for. I drilled the holes using a 1/8 bit to allow the M3 screws to fit into the design whilst allowing them some room for adjustability. The nuts and lock washers are the real thing keeping anything in place with my system, so slight tolerance should not be an issue.
+	- I also redesigned the LDM to account for the new laser diodes I have bought. In terms of design, it is now almost the same as the LMB, with a cylindrical opening to accommodate the laser, and a screwhole (this time, on the right rather than on the top) to keep it firmly in place. I printed it without facing many issues.
+	- I also connected with a physics professor for an opportunity to see a real, optical grade interferometer! Sadly, this is on August 31st, so, according to the deadline objective, I would only have one day to iterate based on the assessed knowledge from this experience. Nonetheless, still cool! 
+
+2026-08-25\
+	Adjusting BSM mount and laser mount\
+	Time spent: 19min (2min logged on Stardance)\
+	- Today, I tried printing  the BSM mount to no avail. The primary issue I found was the alignment - the two larger screwholes for mounting the lower component to the spoilboard were also misaligned to the plate. I fixed this my moving each insert, as well as their respective outer cylindrical platforms which allow the screw to be fully lodged in, away from the center by 2.5mm on both sides. This expands the screw alignment by 5mm, which is correct based on my measurements, and ended up working as intended.
+
+2026-08-26 
+	Goal: Fix BSM mount\
+	Activities: modifying and reprinting BSM mount, instaling LDM and BSM to spoilboard\
+	Time spent: 25min logged on Stardance\
+	- Today, I tried assembling the BSM mounting system to the spoilboard, but there were several more problems with its lower component. 
+	- Firstly, the major spoilboard holes for what I intended to be M5 screws were way too large, whilst also being way too shallow for heat inserts. I decided to reduce them to 5.05mm in diameter to allow only very slight tolerance to the M5 screws. 
+	- Secondly, the boss in this lower component was of a diameter far too large to accommodate M3 screws, yet too small to accommodate M3 screw heat inserts or M4 screws. I adjusted the diameter to be 4.05mm - now, M4 screws properly fit in the frame, too. 
+	- Secondly, the bosses went slightly past the outer walls designed to support the top BSM component - to fix this, I added a central surface to the bottom mount delimited by two larger cylinders to prevent issues with screwing in/adding locks/nuts to the lower screws, which link the component to the spoilboard. Overall, I ended up with this design, which was adequate for my needs without the use of heat inserts.
+	  - I also finally mounted the LDM to the spoilboard, and found no further issued with the design. 
+	`Decisions:`
+	`D-025: I decided to scrap the heat inserts entirely, as of now. If they are re-instated, I will repeal this decision, but the set of locks, nuts, washers and screws is currently able to make an already very rigid assembly for my components, which I judge to be rather indiferrent to that of using heat inserts - which would require reprinting some of the parts used.`
+
+2026-08-27
+Goal: write devlog 
+	Time spent: N/A
+	Activities: writing the devlog.
+	Today was rather brief. I am waiting on the beamsplitter to arrive to take the steps to finalize my project, as school is now beginning to get in the way. 
+
+2026-08-28
+	Goal: catch up on documentation!
+	Actrivities: Journaling, experimenting with beamsplitter and mirrors
+	Time spent: 1h22min on Stardance
+	- I spent most of my time tabulating and reformatting the journaling which has been done in the last couple days. This is to ensure that my formatting is more uniform across all days.
+	- Today, the beamsplitter finally arrived! I was therefore able to test whether the BSM's printed components (BSM.1.0X) were suitable for my system -  they were not. However, the mirrors did fit perfectly within their respective mirror mounts, which was great! I left the reiteration of the BSM mounts for tomorrow, however.
+	
+2026-08-29
+	Goal: Reprint BSM, make first real alignment tests.
+	Activities: Reprints, remounting components, soldering laser wire, first alignment test
+	Time spent:
+	Lots of progress today!
+	-Today, I redesigned the top BSM insert to be slightly larger (BSM3.02) and printed it! It is to note that there was an earlier printed version, (BSM2.02, which had some tolerance but still didn't properly allow for the insertion of my beamsplitter). The insert size ultimately changed from 20.0x20.0mm to 20.5x20.5mm.
+	-I glued the SMB's mirror mounts to the nickel rod using and the MMM's plate mirror mount to the micrometer using hot glue, hoping that this would make the mounts stick more firmly and allow for easier adjustment. After this failed, and the MMM mirror mounts came off shortly after, I realized I needed to redesign the MMM mirror mount to have a small insert to fit the mounts to the micrometer. This would improve stability and hot gluing potential, as it increases the contact surface area to the 3D print.
+	- I soldered the red laser diode to the designated red and black wire in my circuit, as it was getting annoying to manually align the cables. This makes it now possible to test interference, and to power the diode without the use of my hands.
+	- For this reason, I put together all optics together and ran a real alignment test of my system, with the laser, beamsplitter, mirrors and lens all in place for the calibration phase. The light went through the lens, but it wasn't recombined and no fringes showed up - In their place were laser speckles, which randomly appear due to microscopic scattering when hitting a rough surface (in this case, the paper I used.)
+	- The laser was also misaligned with the MMM -  the laser pointed slightly too far to the left and down, which means the light from this first mirror would be completely deflected in a different direction. 
+	- Additionally, the SMB solenoid cover was also measured to be 4mm too low, which meant the laser sometimes hit the top or be seen reflected on the mounts.
+
+
+2026-08-30
+	Time spent: 43min logged on Stardance\
+	Moderate progress today. Topics to talk about\
+	 -more reprints (particularly SMB ones which all failed, anycubic slicer)
+	 -MMM reprint, hole had to be drilled with 7/32 bit (5.49mm diameter)
+	 -Tinkercad revisions of LMB and LDM to account for alignments 
+	 -Assembling with new solenoid cover which is now more aligned!!
+	 - Laser focal point adjustment
+	 - MMM reprint, hole had to be drilled with 7/32 bit (5.49mm diameter)
+	 - Deadline concerns: it is likely not being completed as a project tommorow...
+	 - As of now, 3 parts in the final section remain to be printed.
+
+2026-08-31
+	Time spent: 1h45min logged on Stardance\
+	Lots of progress today! Topics to talk about:
+	- Assembling MMM mirror mount again
+	- Mounting the new LDM to adjust the laser
+	- Aligning compoennts
+	- Recombining light through the lens - Assuming no vibrations, this would mean interferometry successful!
+	- Printing new solenoid cover
+
+2026-09-01
+	Time spent: 3h06min \
+	Progress today: 
+	 -Assembling SMB with new, improved solenoid cover (printed well this time) success
+	 -Resoldering GND wire for laser and using borrowed electrical tape to keep it in place
+	 -Alignment - aligning two lasers in the lens yet, still no desired interferometry (though found Newton Interferometry on accident, not as useful) trick found with holding small piece of paper at laser origin to find divergent lasers and align them!
+	 -Printing new LMB
+	 -Images!
+	 
+	 
+	 Idea for alignment: put rulermarkings on the spoilboard to know distance to mirrors from beamsplitter at ALL times (requires dissassembly of much of the present elements in the system) + move laser closer + Removing nuts/washers in the mirror mounting systems + hot glue mirror mount 1 to micrometer
+
+2026-09-02
+	Goal: create alignment guide for precise adjustment, \
+	Activities:\
+	Time spent: 59min logged on Stardance
+	
+Progress today:
+	-Dissasembly of most components from the spoilboards to make alignments guides on the MDF plate\
+	- Creation of alignment guide'\
+	- setting mirrors to same distance\
+	- designing new LMB (LMB04)
+
+2026-09-03:
+	Goal: Mount new LMB (LMB04)\
+	Activities: Mounting lmb\
+	Time spent: N/A logged\
+	Topics: remounting LMB and rest of mounting system
+
+2026-09-04:
+	 Goal: Journaling\
+	 Activities: bringing documentation to be more up to date and precise.\
+	 Time spent: 42mins logged on Stardance\
+	 To do: FIX TIMES starting 2026-09-01.\
+2026-09-05:
+	Goal: see fringes\
+	Time spent: 
+	Topics: alignmennt of laser - This was what caused most problems for me today.
+	The fact that most mounts is now adjustable and modular seems like an upside, but is proving to be rather detrimental.\
+	-Dust got on mirror 2: Assessed failiure cause: window was open, even with filter, this gets dust from outside trapped in. My window is broken, so it cannot close with the arm, so I therefore closed it manually, but not before dust got it,. and has been getting in for days. I attempted to lightly applyu a microfiber cloth, yet found out that this is rather dangreous, as dust particles couild scratch the mirror. Luckily, my mirror seems unscathed, but unfortunately, this led to be going over budget.\
+	I purchased an air blower and a pack of optical film wipes, as none could be found in my house. This unfortunately brings my total cost to 376.40$. (But gives me the peace of mind that this project can be feasible and sustainable!)
+Here is the two items I bought:
+
+| Item                                                                                                                                                    | Price (CAD)                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| ** [ZEISS Pre Moistened Sunglasses Cleaning Wipes, 120 Count](https://www.amazon.ca/dp/B0FT4WPV5F)**                                                    | 20.69$ (On sale, usual price: 22.99$) |
+| **[Soft Tip Silicone Super Air Blower Blaster Pump Dust Cleaner Include Micro Fiber Cleaning Cloth, Bulb Blower](https://www.amazon.ca/dp/B07Y1TKXVK)** | 13.99$                                |
+
+Idea: instead of using hot glue, using jammed matchstick pieces as a wedge could make my connection much more solid. I am therefore strongly considering this possibility.
+
+2026/09/06
+	Goal: Make alignment easier\
+	Topics: I made alignment guide markings for the laser as well, using a fine tip mechanical center. I used a ruler to make precise translation step references and an angle protractor to create a semi-circular guide. While aligning, I can use the angle protractor to see roughly now many degrees the reflected images are off by with a piece of paper.
+
+2026/09/09
+	Goal: Properly visaualize interferometric fringes 
+	Activities: Aligning the optical components precisely to observe fringes.
+	Time spent (1h24min, 0 logged on Stardance)
+	-I added a new initial procedure to my experiments - cleaning the surface and room for the interferometer using a vacuum cleaner before starting, and that all windows/ventilation is closed or kept to a minimum. This will ensure the environment is as dust free as possible.\
+	-Unfortunately, this phase of the experiment is one which I cannot log on Stardance - the computer must be turned off at all times to minimize vibrations which would perturb the experiment, and, on mobile, the very low brightness required to see the expanded fringe image with the lens, making the recording freeze due to no changes in activity being reported. Annoying enough - but not the end of the world. \
+	-One issue which I encountered today was that of lens alignment. The lens translation works perfectly,. but, when the laser beam is perfectly aligned with the beamsplitter and mirrors, unlike before, the image appears higher. By using a cut piece of poster paper and manually moving the lens up until it reaches the image, then marking key points with a mechanical pencil, I estimated that the lens was between 3.0-4.0mm too low respective to the image height. Therefore, I should print a new beamsplitter which factors in this height.\
+	-However, I was able to spot the first actual Michaelson Interferometry in my project. This was by re-hot-gluing the MMM mirror mount to the micrometer (inoptimal, I know...) and adjusting the length to the beamsplitter mount to 3.8cm for both mirrors. I saw 6-7 distinct rings of darkness form. However, the strange thing is that if the mirrors were made have their images unaligned, interferometry (fringes) still occur on both the images. According to my understanding of interference, this should NOT occur in the Michaelson interferometer! However, once misaligning the lengths of the two mirrors, the fringes dissappear once again, confirming that they are true Michaelson Interferometry waves. My research has not led to any reasonable explanation for this phenomenon. Success (?)\
+	-Idea: LMB with plates and vertical rails. Much like adding weights works in a gym, adding plates under the LMB and making the larger system modular could allow for height to be semi-adjustable - but much mroe than it is now.
+
+2026/09/10
+	Goal: Fix LMB mount height
+	Time spent: 18 mins
+	Activities: Slightly raising LMB mount design by 3.5mm to account for yesterday's observations. 
+
+2026/09/13
+	Goal: Get even BETTER images thanks to new LMB, and funding request resubmission
+	Time spent:
+	Activities: assembling new LMB to spoilboard, adjusting interferometry ~~ritual~~ alignment. documentation
+	- Today, I printed the LMB, remounted the new LMB to the spoilboard and re-ran the interferometry calibration procedure. Speaking of which, I MADE a proper interferometry calibration protocol - see the README.md file!\
+	- I was able to capture the smoothest example of interferometry I have observed thus far. The rings were distinct and crisp, reacting to even the slightest of vibrations. \
+	- The  multi image effect was, once again, spotted. This time, however, I noticed that an indescribably fascinating phenomenon was occurring whilst I slowly shifted angle of one of the mirror angles into place - The rings weren't changing place, but amplifying in intensity after a couple seconds as the mirrors aligned back into place. \
+	- I deemed that, with this level of interferometry, it may be possible to now consider the electronic measurement system, officially entering a new, long awaited phase in this project's development. \
+	- I decided to move forward to resubmit my project for a funding request on Stardance. This means that my BOM was updated with new items and the 3d .stl files were submitted separately once more, as .step files (as to comply with Stardance rules.)
 # **Sources for this document 
 (bibliography.md file to be created later)**
 [1]
