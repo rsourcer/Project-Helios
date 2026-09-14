@@ -64,7 +64,8 @@ SPB: Spoilboard\
 
 # Testing Checklist
 
-**Calibration**
+**Calibration**\
+
 1: Prepare a clean, flat surface to work on.\
 2: Use a vacuum cleaner on work surface and isolate ventilation of room to ensure no dust enters. Ideally, use an air purifier to mitigate dust further.\
 3: Connect ATMega32P to power.\
@@ -77,7 +78,7 @@ SPB: Spoilboard\
 10: Use piece of cut paper to determine where laser images are at key points (beside the laser origin and in front of the lens)\
 11: Align accordingly using screw mounts until all images land at the same place (on the beam)\
 12: If needed, adjust lens position precisely using translation screws until the recombined beam is at the lens center.\
-13: If needed, adjust laser focal length with focal adjustment guide until the beam does not visibly diverge or converge at a point, using the lens image and cut paper to measure laser size.\
+13: If needed, adjust laser focal length with focal adjustment guide until the beam does not visibly diverge or converge at a point, using the lens image and cut paper to measure laser size.
 
 Further explanations are in the JOURNAL.md file - I recommend checking it out! 
 
