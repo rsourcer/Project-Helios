@@ -65,19 +65,19 @@ SPB: Spoilboard\
 # Testing Checklist
 
 **Calibration**
-1: Prepare a clean, flat surface to work on.
-2: Use a vacuum cleaner on work surface and isolate ventilation of room to ensure no dust enters. Ideally, use an air purifier to mitigate dust further.
-3: Connect ATMega32P to power.
-4: Wear disposable gloves to ensure touched components remain dust free.
-5: Gently take out the beam splitter out of container, while holding its edges. Avoid contact with flat surface.
-6: Place the beam splitter flat onto the BSM mount.
-7: Gently take out the mirror while holding its circular edge - a plier may be used to facilitate removal from the case and precise insertion.
-8: Place the mirror onto the MMM mirror mount whilst avoiding contact between the plastic mount and the silvered surface.
-9: Repeat steps 7-8, but place the mirror onto the SMB mirror mount instead.
-10: Use piece of cut paper to determine where laser images are at key points (beside the laser origin and in front of the lens)
-11: Align accordingly using screw mounts until all images land at the same place (on the beam)
-12: If needed, adjust lens position precisely using translation screws until the recombined beam is at the lens center.
-13: If needed, adjust laser focal length with focal adjustment guide until the beam does not visibly diverge or converge at a point, using the lens image and cut paper to measure laser size.
+1: Prepare a clean, flat surface to work on.\
+2: Use a vacuum cleaner on work surface and isolate ventilation of room to ensure no dust enters. Ideally, use an air purifier to mitigate dust further.\
+3: Connect ATMega32P to power.\
+4: Wear disposable gloves to ensure touched components remain dust free.\
+5: Gently take out the beam splitter out of container, while holding its edges. Avoid contact with flat surface.\
+6: Place the beam splitter flat onto the BSM mount.\
+7: Gently take out the mirror while holding its circular edge - a plier may be used to facilitate removal from the case and precise insertion.\
+8: Place the mirror onto the MMM mirror mount whilst avoiding contact between the plastic mount and the silvered surface.\
+9: Repeat steps 7-8, but place the mirror onto the SMB mirror mount instead.\
+10: Use piece of cut paper to determine where laser images are at key points (beside the laser origin and in front of the lens)\
+11: Align accordingly using screw mounts until all images land at the same place (on the beam)\
+12: If needed, adjust lens position precisely using translation screws until the recombined beam is at the lens center.\
+13: If needed, adjust laser focal length with focal adjustment guide until the beam does not visibly diverge or converge at a point, using the lens image and cut paper to measure laser size.\
 
 Further explanations are in the JOURNAL.md file - I recommend checking it out! 
 
