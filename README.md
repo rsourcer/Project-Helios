@@ -65,31 +65,42 @@ SPB: Spoilboard\
 # Testing Checklist
 
 **Preparation**
-
+---
 1: Prepare a clean, flat surface to work on.\
 2: Use a vacuum cleaner on work surface and isolate ventilation of room to ensure no dust enters. Ideally, use an air purifier to mitigate dust further.\
-3: Connect ATMega32P to power.\
-4: Wear disposable gloves to ensure touched components remain dust free.\
-5: Gently take out the beam splitter out of container, while holding its edges. Avoid contact with flat surface.\
-6: Place the beam splitter flat onto the BSM mount.\
-7: Gently take out the mirror while holding its circular edge - a plier may be used to facilitate removal from the case and precise insertion.\
-8: Place the mirror onto the MMM mirror mount whilst avoiding contact between the plastic mount and the silvered surface.\
-9: Repeat steps 7-8, but place the mirror onto the SMB mirror mount instead.\
+3: Wear disposable gloves to ensure touched components remain dust free.\
+4: Gently take out the beam splitter out of container, while holding its edges. Avoid contact with flat surface.\
+5: Place the beam splitter flat onto the BSM mount.\
+6: Gently take out the mirror while holding its circular edge - a plier may be used to facilitate removal from the case and precise insertion.\
+7: Place the mirror onto the MMM mirror mount whilst avoiding contact between the plastic mount and the silvered surface.\
+8: Repeat steps 7-8, but place the mirror onto the SMB mirror mount instead.\
 
 **Calibration**
+---
+1: Connect ATMega32P to power.\
+2: Using the spoilboard ruler markings, ensure L1 (distance from mirror 1 to beamsplitter) is within a millimeter's difference from L2 (distance from mirror 2 to beamsplitter) and that the micrometer is not fully extended.\
+3: Use piece of cut paper to determine where laser images are at key points (beside the laser origin and in front of the lens)\
+4: Align accordingly using screw mounts until all images land at the same place (on the beam)\
+5: If needed, adjust lens position precisely using translation screws until the recombined beam is at the lens center.\
+6: If needed, adjust laser focal length with focal adjustment guide until the beam does not visibly diverge or converge at a point, using the lens image and cut paper to measure laser size.
 
-1: Using the spoilboard ruler markings, ensure L1 (distance from mirror 1 to beamsplitter) is within a millimeter's difference from L2 (distance from mirror 2 to beamsplitter) and that the micrometer is not fully extended.\
-2: Use piece of cut paper to determine where laser images are at key points (beside the laser origin and in front of the lens)\
-3: Align accordingly using screw mounts until all images land at the same place (on the beam)\
-4: If needed, adjust lens position precisely using translation screws until the recombined beam is at the lens center.\
-5: If needed, adjust laser focal length with focal adjustment guide until the beam does not visibly diverge or converge at a point, using the lens image and cut paper to measure laser size.
-
+**Electronic Measurement**
+---
+1: If unconnected, connect the Photodiode anode to the 5V AtMega32P pin.
+2: Connect the GND wire from the op-amp's Pin 3 to the GND AtMega32P pin.
+3: Power on the AtMega32P and turn on the power supply.
+4: Precisely move mirror 1 using the permitted movement in the MMM until the signal modulation drops significantly on screen, making sure that the laser dot image hits the photodiode - this ensures the photodiode is measuring dips produced by Michaelson fringes!
+5: Gradually set power supply current to 10A in about 5 seconds. Be sure to remain as constant as possible.
+6:Observe change produced in photodiode signal.
 Further explanations are in the JOURNAL.md file - I recommend checking it out! 
 
 # Electronics
   <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Tinkercad%20wiring%20schematic.png" width="400" />
 
+There are two electronic circuits which make up the interferometry platform. The first is pictured above - it passes 5V through an MCP601 op-amp paired with a BPW34 photodiode to receive and amplify light signals, connected to the microcontroller - also connected to the 3.3V power source is 100Ohm resistor in series with a 650nm red laser diode.
 
+The second is a 10A,30V power supply in CC mode running through a 120 turn, 25ft copper wire to create a solenoid magnetic field, which is used to measure magnetostriction inside a nickel rod.
+# Threshold Detection Limir
 Sources for this document:\
 [1]
 
