@@ -1,5 +1,5 @@
 # Helios-Michaelson-Interferometer
-Digitally assisted optical platform using a Michaelson Interferometer allowing for magnetostriction testing on laser light. 
+Digitally assisted optical platform using a Michaelson Interferometer allowing for magnetostriction testing using red laser light. 
 
 
 A **Michaelson Interferometer** is a typical configuration for interferometry in which a laser first hits a beamsplitter. The light is roughly equally split, travelling in two perpendicular directions, but hit a mirror, which bounces both beams back to the beamsplitter. This makes the light recombine in a strange way, creating a rippling effect and travelling in a completely new direction. The change in light intensity caused by these ripples as one of the mirrors moves can be measured by a photodiode and can be used to calculate the wavelength of the light to, in theory, calculate the phase shift caused by a magnetic field caused by a solenoid. This is done with the formula
@@ -100,7 +100,14 @@ Further explanations are in the JOURNAL.md file - I recommend checking it out!
 There are two electronic circuits which make up the interferometry platform. The first is pictured above - it passes 5V through an MCP601 op-amp paired with a BPW34 photodiode to receive and amplify light signals, connected to the microcontroller - also connected to the 3.3V power source is 100Ohm resistor in series with a 650nm red laser diode.
 
 The second is a 10A,30V power supply in CC mode running through a 120 turn, 25ft copper wire to create a solenoid magnetic field, which is used to measure magnetostriction inside a nickel rod.
-# Threshold Detection Limir
+
+#Results
+Following the Electronic Measurement protocol:
+- A significant and repeated drop in signal strength of about 1.0(+-0.5) has been observed when the power supply current is increased at a steady rate.
+- When the current is increased to 10A very quickly, the signal strength drops instantaneously.
+- When the photodiode is fully covered, increasing the current does not affect it in any way.
+Due to these factors, qualitative proof of the magnetostrictive properties of a nickel rod has been established beyond reasonable doubt, as the phase shift must can only have been caused by mechanical movement.
+# Threshold Detection Limit
 Sources for this document:\
 [1]
 
