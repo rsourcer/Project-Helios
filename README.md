@@ -62,17 +62,29 @@ PS: Power Supply\
 NR: Nickel Rod\
 S or SLD: Solenoid\
 AMP/TIA: Trans-Impendence Amplifier\
-Mounts BSM: Beamsplitter mount\
+Mounts\
+BSM: Beamsplitter mount\
 LDM: Laser diode mounting bracket\
 LMB: Lens mounting bracket\
-SMM: Solenoid mirror mount\
-MMM: Micrometer mirror mount\
+SMM/SMB: Solenoid mirror mounts/bracket\
+MMM: Micrometer mirror mounts\
 PMB: Photodiode mounting bracket\
 SPB: Spoilboard
 
 # 3D Models
-- To print all components, the stl files were used and sliced into gcode- this may lead to inconsistencies when using the step file! Please beware of this if trying to replicate the experiment.
-
+- To print all components, the stl files were used and sliced into gcode- this may lead to inconsistencies when using the step file, as it was converted online! Please beware of this if trying to print models.\
+  <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/PMB%20final.png" width="500" />\
+  Fig 1.02: Finalized version of the PMB.\
+    <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/LDM%20final.png" width="500" />\
+  Fig 1.03: Finalized version of the LDM.\
+    <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/LMB%20final.png" width="500" />\
+  Fig 1.04: Finalized version of the LMB.\
+    <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/SMB%20final.png" width="500" />\
+  Fig 1.05: Finalized version of the SMB.\
+    <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/MMM%20final.png" width="500" />\
+  Fig 1.06: Finalized version of the MMM.\
+    <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/BSM%20final.png" width="500" />\
+  Fig 1.07: Finalized version of the BSM.\
 # Testing Checklist
 
 **Preparation**
@@ -107,15 +119,15 @@ Further explanations are in the JOURNAL.md file - I recommend checking it out!
 
 # Electronics
   <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Tinkercad%20wiring%20schematic%2001.png" width="500" />
-  Fig 1.02: Original theoretical wiring for TIA amplification system for a photodiode.
+  Fig 1.08: Original theoretical wiring for TIA amplification system for a photodiode.
  <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Tinkercad%20wiring%20schematic%2002.png" width="500" />
-  Fig 1.03: Real-world wiring for TIA amplification system used in trial results.
+  Fig 1.09: Real-world wiring for TIA amplification system used in trial results.
 
 There are two electronic circuits which make up the interferometry platform. The first is pictured above - it passes 5V through an MCP601 op-amp paired with a BPW34 photodiode to receive and amplify light signals, connected to the microcontroller - also connected to the 3.3V power source is 100Ohm resistor in series with a 650nm red laser diode.
 
 The second is a 10A,30V rated power supply in CC mode running through a 120 turn, 25ft copper wire to create a solenoid magnetic field, which is used to measure magnetostriction inside a nickel rod:\
  <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Solenoid%20wiring%20representation.png" width="500" />\
-  Fig 1.04: Electrical wiring diagram of DC power supply with solenoid.
+  Fig 1.10: Electrical wiring diagram of DC power supply with solenoid.
   
 # Results
 Following the Electronic Measurement protocol:
@@ -124,7 +136,7 @@ Following the Electronic Measurement protocol:
 - When the photodiode is fully covered, increasing the current does not affect it in any way.
 Due to these factors, qualitative proof of the magnetostrictive properties of a nickel rod has been established beyond reasonable doubt, as the phase shift must can only have been caused by mechanical movement.
 <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Magnetostriction%20test%2001.jpeg"/>
-
+Fig 1.11: Representation of obtained results from magnetostriction, trial run 1.
 
 Sources for this document:\
 [1]
