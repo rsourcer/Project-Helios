@@ -1,7 +1,7 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
-**Revision 0.4.0\
+**Revision 0.4.1\
 Raoul Salemi\
-This log is accurate as of 28/09/2026, 12:34 AM EST\
+This log is accurate as of 28/09/2026, 5:58 PM EST\
 \
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
@@ -10,10 +10,12 @@ This document is to keep track of and formulate daily ideas along the course of 
 The object's technical objective is to build a Michaelson Interferometer system which can:
 - Takes a laser diode's output
 - Splits the light through a beam splitter component
-- Recombines it with the help of two mirrors, creating the interferometric patterns crucial to the experiment
-- Expands the image onto a photodiode using a lens
-- Detects interference patterns using a TIA photodiode system as one of the mirrors moves parallel to the laser light.
-It can then:
+- Recombine light with the help of two mirrors, creating the interferometric patterns crucial to the experiment
+- Project the image onto a photodiode or expand it with a lens
+- Detect interference patterns using a TIA photodiode system as one of the mirrors moves parallel to the laser light.
+- Detect magnetostriction through fringe movements spotted by the photodiode's signal output
+
+Given this, it could then be able to:
 - Accurately calculate wavelengths (defined later) based off mirror's movement from the micrometer's translation.
 - Determine magnetostriction constant of a solenoid on which a mirror is mounted, based off the change in position of the aforementioned mirror.
 
