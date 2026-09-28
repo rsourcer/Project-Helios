@@ -86,12 +86,12 @@ SPB: Spoilboard\
 
 **Electronic Measurement**
 ---
-1: If unconnected, connect the Photodiode anode to the 5V AtMega32P pin.
-2: Connect the GND wire from the op-amp's Pin 3 to the GND AtMega32P pin.
-3: Power on the AtMega32P and turn on the power supply.
-4: Precisely move mirror 1 using the permitted movement in the MMM until the signal modulation drops significantly on screen, making sure that the laser dot image hits the photodiode - this ensures the photodiode is measuring dips produced by Michaelson fringes!
-5: Gradually set power supply current to 10A in about 5 seconds. Be sure to remain as constant as possible.
-6:Observe change produced in photodiode signal.
+1: If unconnected, connect the Photodiode anode to the 5V AtMega32P pin.\
+2: Connect the GND wire from the op-amp's Pin 3 to the GND AtMega32P pin.\
+3: Power on the AtMega32P and turn on the power supply.\
+4: Precisely move mirror 1 using the permitted movement in the MMM until the signal modulation drops significantly on screen, making sure that the laser dot image hits the photodiode - this ensures the photodiode is measuring dips produced by Michaelson fringes!\
+5: Gradually set power supply current to 10A in about 5 seconds. Be sure to remain as constant as possible.\
+6:Observe change produced in photodiode signal.\
 Further explanations are in the JOURNAL.md file - I recommend checking it out! 
 
 # Electronics
