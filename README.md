@@ -107,6 +107,8 @@ Following the Electronic Measurement protocol:
 - When the current is increased to 10A very quickly, the signal strength drops instantaneously.
 - When the photodiode is fully covered, increasing the current does not affect it in any way.
 Due to these factors, qualitative proof of the magnetostrictive properties of a nickel rod has been established beyond reasonable doubt, as the phase shift must can only have been caused by mechanical movement.
+<img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Magnetostriction%20test%2001.jpeg"/>
+
 # Threshold Detection Limit
 Sources for this document:\
 [1]
