@@ -1,7 +1,7 @@
 **Engineering Log for Open Source Michaelson Interferometer**\
-**Revision 0.3.0**\
+**Revision 0.4.0\
 Raoul Salemi\
-This log is accurate as of 13/09/2026, 11:29 PM EST\
+This log is accurate as of 28/09/2026, 12:34 AM EST\
 \
 This document is to keep track of and formulate daily ideas along the course of this project. This will include any research, objectives, constraints and thoughts.
 
@@ -87,7 +87,7 @@ $$\Delta \phi = \frac{4\pi \Delta L}{\lambda}$$
 - Recycled components
 	While doing preliminary research in DIY interferometry, it struck my eye that many projects use recycled components to achieve their goals with relatively much power cost, while still retaining rather high precision. (3 Project Examples) Within that context, this project, too, must make creative use and source components from at least one recycled item - a component for which the intention of procurement was not originally interferometry or any other optical experimentation.
 - Magnetostriction element
-	The platform must be able to perform magnetostrictive tests on a solenoid, and determine its magnetostriction constant. This is the end goal of the interferometer, as it shows a real world application in which it can be used, beyond determining the wavelength of the laser diode. Doing so, it must also pass the precision aspect of the project.
+	The platform must be able to observe the effects of magnetostriction through a solenoid. This is the end goal of the interferometer, as it shows a real world application in which it can be used, beyond determining the wavelength of the laser diode. Doing so, it must also pass the precision aspect of the project.
 
 - 3D Printing aspect
 	To build a Michaelson interferometer, precise adjustment of distances is needed. Therefore, it would be reasonable to use my 3D printer, to this end. An important secondary goal of mine would be to test structural elements of pieces printed for this project from varying infill percentages and patterns, extrusion settings- etc, to make the most optimal 3D printed components for the interferometer. What defines "most optimal 3D printed components" will be defined later. My goal for this constraint is to further my knowledge of materials testing. 
@@ -790,23 +790,122 @@ Idea: instead of using hot glue, using jammed matchstick pieces as a wedge could
 	-Unfortunately, this phase of the experiment is one which I cannot log on Stardance - the computer must be turned off at all times to minimize vibrations which would perturb the experiment, and, on mobile, the very low brightness required to see the expanded fringe image with the lens, making the recording freeze due to no changes in activity being reported. Annoying enough - but not the end of the world. \
 	-One issue which I encountered today was that of lens alignment. The lens translation works perfectly,. but, when the laser beam is perfectly aligned with the beamsplitter and mirrors, unlike before, the image appears higher. By using a cut piece of poster paper and manually moving the lens up until it reaches the image, then marking key points with a mechanical pencil, I estimated that the lens was between 3.0-4.0mm too low respective to the image height. Therefore, I should print a new beamsplitter which factors in this height.\
 	-However, I was able to spot the first actual Michaelson Interferometry in my project. This was by re-hot-gluing the MMM mirror mount to the micrometer (inoptimal, I know...) and adjusting the length to the beamsplitter mount to 3.8cm for both mirrors. I saw 6-7 distinct rings of darkness form. However, the strange thing is that if the mirrors were made have their images unaligned, interferometry (fringes) still occur on both the images. According to my understanding of interference, this should NOT occur in the Michaelson interferometer! However, once misaligning the lengths of the two mirrors, the fringes dissappear once again, confirming that they are true Michaelson Interferometry waves. My research has not led to any reasonable explanation for this phenomenon. Success (?)\
-	-Idea: LMB with plates and vertical rails. Much like adding weights works in a gym, adding plates under the LMB and making the larger system modular could allow for height to be semi-adjustable - but much mroe than it is now.
+	`-Idea: LMB with plates and vertical rails. Much like adding weights works in a gym, adding plates under the LMB and making the larger system modular could allow for height to be semi-adjustable - but much mroe than it is now.`
 
 2026/09/10
-	Goal: Fix LMB mount height
-	Time spent: 18 mins
+	Goal: Fix LMB mount height\
+	Time spent: 18 mins\
 	Activities: Slightly raising LMB mount design by 3.5mm to account for yesterday's observations. 
 
 2026/09/13
-	Goal: Get even BETTER images thanks to new LMB, and funding request resubmission
-	Time spent:
-	Activities: assembling new LMB to spoilboard, adjusting interferometry ~~ritual~~ alignment. documentation
+	Goal: Get even BETTER images thanks to new LMB, and funding request resubmission\
+	Time spent: 1h21min logged on Stardance
+	Activities: assembling new LMB to spoilboard, adjusting interferometry ~~ritual~~ alignment. documentation\
 	- Today, I printed the LMB, remounted the new LMB to the spoilboard and re-ran the interferometry calibration procedure. Speaking of which, I MADE a proper interferometry calibration protocol - see the README.md file!\
 	- I was able to capture the smoothest example of interferometry I have observed thus far. The rings were distinct and crisp, reacting to even the slightest of vibrations. \
 	- The  multi image effect was, once again, spotted. This time, however, I noticed that an indescribably fascinating phenomenon was occurring whilst I slowly shifted angle of one of the mirror angles into place - The rings weren't changing place, but amplifying in intensity after a couple seconds as the mirrors aligned back into place. \
 	- I deemed that, with this level of interferometry, it may be possible to now consider the electronic measurement system, officially entering a new, long awaited phase in this project's development. \
 	- I decided to move forward to resubmit my project for a funding request on Stardance. This means that my BOM was updated with new items and the 3d .stl files were submitted separately once more, as .step files (as to comply with Stardance rules.)
-# **Sources for this document 
+
+2026/09/14
+	Time spent: 1h00min (N/A logged on Stardance)\
+	Activities: Viewing of PROPER Michaelson interferometer which uses a sodium lamp to create proper fringes. \
+	- Advice/idea: Rework MMM to be more solid. Today, I was able to bring my interferometer to my college, which allowed me to get meaningful input from two physics professors. The main critique was that my MMM was way too flimsy, and since the micrometer moves helicoidally and the guides are meant for translational movement, meaning that the movement exerted heavy rotation on the mirror mount. The hot glue exacerbated this problem by creating additional friction.\
+	- I found that Michaelson fringes move depending on the viewing angle, alike what I partially saw in my own system, suggesting that my system somewhat was making fringes resulting from recombined light as intended. However, these were much more crisp, and no non angle dependant rings (as in my system) were present. We concluded that some these rings on my system were due to imperfections in the lens causing Newton interferometry.
+
+
+2026/09/16
+	Goal: Get even BETTER images thanks to new LMB
+	Activities: CAD work - new MMM supports, ordered epoxy glue
+	Time spent: 27min logged on Stardance
+	- Today, I focused my time on ensuring that the guides for the MMM could be reinforced, making a system which allows smooth translation for the mirror mount. I took the two lateral M6 threaded screws on the spoilboard that the MMM already uses to serve as a reference for where these guides should go. I then added another mounting hole for the next two M6 threaded inserts towards the center - that way, both guiding mounts would be firmly attached to the main system. I made heavy use of fillets throughout the design to decrease stress, except at one point - the side walls facing the MMM, where the guide needed to restrict the mirror mount's movement. I allowed a +-0.5mm tolerance on each side for the mirror mounting components - That way, the adjustment screws can still be tuned, but the movement of the MMM stays strictly forward as the micrometer moves. I also extended the length of these side walls to be equal to that of the MMM's pre-existing guides and bumper post, to make the design more coherent and make sure that the guides remain around the mirror mount at all times. I made the inner wall height double that of the MMM's screw bracket, as to be able to properly mount the screw bracket, outer wall guides and a nut using the M6x30mm screws.
+
+I also ordered epoxy glue, as reccomended by my professors:
+
+| Item                                                                                                                                                                                                | Price (CAD) |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| **[Gorilla Glue Epoxy, Dries Clear, Gap Filling, Indoor & Outdoor, Water Resistant, 5 Minute Set, Dries Clear Transparent, 0.85oz/25mL, (Pack of 1) 4200602](https://www.amazon.ca/dp/B07W6C9R4K)** | 13.49$      |
+This brings my total budget to 390.37$. It is arriving on 2026/09/18.
+
+2026/09/17
+	Goal: Mount new MMM guides and run alignment tests
+	Activities: Mount new MMM guides and running alignment tests, in which I ultimately failed to find any fringes.
+	Time spent: 1h00min (39 mins logged on Stardance)
+	- Today, I started by mounting the newly-improved MMM walls to the spoilboard, which was of no issue. 
+	- I then reconfigured my computer from being on the desk to being on the ground. This would minimize ambient vibrations on my desk, meaning I could keep the computer open while testing - I can actually log my time and my experimentations at once in Stardance rather than relying on my phone's chronometer app! Furthermore, this opens the possibility of testing the photodiode - one of the last needed elements to consider this project complete.
+	- However, alignment was what ultimately caused problems today. Precisely aligning the fringes was a deal of great frustration - I was unable to find any fringes today. It seemed as the leftover hot glue that had since detached was causing the system to still slightly rotate when the micrometer moved, even with the new guiding walls. I also didn't have much time to dedicate to this project.
+
+I ended up buying buying a set of assorted springs to streamline the adjustment process, 
+
+| Item                                                                                                                         | Price (CAD) |
+| ---------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| **[300PCS Compression Springs Assortment 23 Sizes for Home Repair DIY](https://www.amazon.ca/hz/wishlist/ls/1ZTF5OO3SQLLC)** | 13.99$      |
+|                                                                                                                              |             |
+
+This item brings my total to 403.88$. It is arriving on 2026/09/19.
+
+2026/09/18
+	Goal: fix MMM
+	Activities: Setup of TIA photodiode circuit, use of Gorilla Glue rather than hot glue for the MMM mirror mount - works much better!
+	Time spent: 42 mins logged on Stardance
+	- Today, the hot glue arrived! I therefore removed as much hot glue as I could from the micrometer blind hole in the MMM mirror mount. I then carefully applied the gorilla glue and let the system rest.
+	- I attempted to solder the photodiode to two uncut wires, but it was far too flimsy when placed in the PMB and broke off several times. I then gave up.
+	- I set up a tentative version of the wiring for my photodiode circuit, which worked! I was able to read values rapidly oscillating to peaks, of around 300, to readable values ranging from 0-100. However, light was being detected.
+	
+
+2026/09/19
+	Goal: updating devlog and journaling
+	Activities: Writing Devlog, configuring electronics
+	Time spent: N/A (Stardance recording lost, 43min?)
+	- I wrote a devlog to document my findings so far! This is as to not get too ahead and have to write a very detailed report regarding my progress so far sometime later. Unfortunately, this lead to the unsaved recordings, including the ones of today and the original photodiode circuit progress, being deleted.
+	- The springs also came today - I didn't yet implemented them, yet tested them with M3 screws to see if they were compatible.
+	- I also updated the BOM to include the compression springs, as to resubmit a proper funding request with included .step files and electronics diagrams.
+
+2026/09/23
+	Goal: Get the photodiode system working!
+	-I changed the mirror mounts to implement the new springs, which seemed to be a major improvement - instead of:
+	|Screw | Mount 1 | Flat Washer | Lock Washer | Nut 1 | /// | Nut 2 | Mount 2 | Lock Washer |Nut|
+	it was now:
+	|Screw | Mount 1 | Flat Washer | Lock Washer | Nut 1 | Spring | Mount 2| NUT|
+	This removed complexity from the mirror mount and made it easy to adjust orientation as wanted with a wrench, as the spring would adjust when either nut is moved (beforehand, 2 nuts had to be moved to adjust orientation).\
+	- I soldered the PMB properly - I cut the two wires' leftmost jumper connection, stripping them bare, and used red tape to keep them firm - I then cut the red tape  Plugging back into the circuit\
+	 - The output was now ranging between signal strength output values ~ 800 and 1023, which is the full amplified output - however, it was oscillating rapidly between the actual amount of light measured in the photodiode and the maximum value, independent of what was actually being captured by the photodiode. To test darkness, I used my hands. I accidentally touched the op-amp with my pliers, however, which temporarily removed all amplification effects, and left the output signal oscillating between 0 and ~260. Removing and re-inserting my op-amp fixed this. It seemed to overall oscillate at about 60Hz, which may be explained by AC current somehow affecting and overloading the photodiode circuit. 
+2026/09/24
+	Goal: Remove the noise in the photodiode system
+	Activities: Tinkering with photodiode system
+	Time spent: 59min (13mins on Stardance)
+	- Today, I tried some options to properly mitigate the noise in the circuit, to no avail. I realized that my resistor trimmer was using pin 1 and 3, outputting the maximum resistance no matter how many turns I would use - I switched to pin 1 and pin 2, then used a multimeter to limit the resistor to 50 kOhm. However, this didn't change much in my circuit, other than confirming that my trimmer works as intended, which is a bonus.
+
+2026/09/25
+	2h14min (1h26min logged on stardance)
+	Goal: Removing noise in photodiode system
+	Activities: Finally mitigating photodiode noise. 
+	- Today, me and my friend in electrical engineering got to work with the aim of fixing the noise from 800-1023 peaks confirmed to be in repeated 60Hz cycles, which was observed. 
+	- I realized that I had incorrectly wired the system according to my Tinkercad drawing (The red wires got mixed up - pin 7 and pin 2 were connected and the photodiode anode/Arduino 5V pin were connected); when I wired it 'correctly', after fixing an apparent short circuit, the output would remain at 0 constantly.
+	- I changed the A0 signal wire to go from op-amp pin 6 (output), as intended, to pin 8 (offset pin) to see if a floating OUT signal would be seen - and it was. The signal was oscillating between 0 and 400, completely independent of how much light would be detected.
+	- After rewiring everything, and tweaking the program, I got a signal much like the 1023-800 oscillations, but this time with ~0-200. re-installing the op-amp did not do anything this time. The wiring was the same as the it had been when seeing the original 800-1023 peaks.
+	- A big breakthrough occurred when I set the output timer to 33.333333ms per sample in the code. I would get perfectly flat 0 output for 5 seconds, then it would go out of phase with the oscillations once again, very slowly oscillating. This was a sign that a multiple of 30Hz was likely playing part in these fluctuations. Furthermore, setting the outputs to something very low, such as 0.05ms and comparing to 0.03333ms, the same harmonic-like effect would occur at a faster scale. Therefore, to do better, we needed to get rid of the roundoff error we were experiencing. 
+	- I also started using first iteration of LDM to block out outer laser ring images. This allows for only the main laser beam to reach the beamsplitter.
+
+2026/09/26
+1h25min (31 mins logged on Stardance)
+Activities: Tweaking photodiode code and wiring solenoid
+	Today, I spent much of my time wrapping the 25ft copper wire around the solenoid cover., to make a 120 turn solenoid.
+	- My friend and I tweaked the code to account for 120Hz cycles, and measure photodiode light intensity offset of any fluctuations. This worked very well! It was outputting between a value range of ~100 and 200, and fluctuating by less than 1 at every step.
+	- The true fix, though, came from removing the GND wire on op-amp pin 4: This brought the measuring range from ~97-326, which is very suitable for this experiment! Despite the capacitor and resistor being in parallel to the circuit, the signal output being above 255 suggests there is some amplification being done through the op-amp.
+
+2026/09/27
+	Goal: Finalize the circuit for testing\
+	Activities: Making and mounting pinhole for photodiode, finally testing laser alignment with new upgrades, updating journal with clearer info, SUCCESSFUL qualitative magnetostriction test!\
+	Time spent: 3h01min logged on Stardance\
+	- Today, I started by setting up the DC power supply to be connected to the solenoid. Upon testing, I noticed (or rather didn't) that the supposed movement was so small, that I couldn't see any signs of it with the naked eye. \
+	- Testing the laser alignment, I saw that, when recombined, the measured intensity would jump from \~97 to about 270. I deemed that this is solid enough for fringe detection, even if the full amplification effect has yet to show itself.\
+	- To eliminate diffused light rays coming from outside, I decided to use a 60/8 sewing needle to puncture aluminum foil by making an at most 0.60mm pinhole- the size is unmeasured, but it is visibly much smaller than 0.60mm as it is almost invisible to the naked eye, and much smaller in diameter than the needle itself. I taped the foil on with electrical tape and, to make sure light was passing through, I tested the pinhole by using my phone's flash, which output a consistent signal value of 320-322. I then aligned the laser to the beam, where I saw the range vary from 97-250. The major advantage of this approach is that I can now reliably run interferometry tests even in lit up rooms, as not many rays can directly reflect back to the photodiode through the pinhole. \
+	- Re-aligning the lasers once again, I carefully moved the MMM mirror mount using the micrometer very slowly until I noticed major dips in the observed light, while keeping both beams recombined - this was my approach to finding the range of interferometry, or when the distances from the beamsplitter to the mirrors are roughly equal to one another (L1~L2). This worked! The signal oscillated between staying the same and gradually getting lower. I stopped when the signal went from 249 to 240 - This is about when Michaelson fringes should start. I also, once again, noticed rings forming in the recombined fringes displayed on the aluminum foil. However, it is to note that taking photos of these fringes with my phone camera proved to be exceedingly difficult - I chose to instead photograph the data plotter and output on the Arduino IDE. \
+	- I then raised the power gradually in the DC power supply to 10A in a roughly 5 second period. I saw the output signal strength drop from fluctuating around 240, to fluctuating around 240/239, before finally settling at 239 with some dips to 238. After three consecutive re-runs, I got the same resulting behavior, confirming that this observed behavior is repeated and likely not due to random noise.\
+	- I then raised the power instantly in pulses. The signal strength dropped from 241 to 240 or 240 to 239 instantly all three times, confirming that these changes are not due to thermal expansion.\
+	- I then removed the mirrors and beamsplitter from the system, covering the photodiode, and brought back the DC current to 10A, in order to test if parasitic effects from the magnetic field in the solenoid could be the cause of the current drop in the photodiode output. I was able to conclude that no measurable effect was produced by the solenoid's magnetic field on the photodiode system. Thus, it is fair to conclude, beyond reasonable doubt, that what I was able to capture today was a product of magnetostriction in a nickel rod, determined qualitatively through a Michaelson Interferometer. The Magnetostrictive Element of my project is therefore complete.
+# **Sources for this document
 (bibliography.md file to be created later)**
 [1]
 
