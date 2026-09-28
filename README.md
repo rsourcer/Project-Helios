@@ -101,7 +101,7 @@ There are two electronic circuits which make up the interferometry platform. The
 
 The second is a 10A,30V power supply in CC mode running through a 120 turn, 25ft copper wire to create a solenoid magnetic field, which is used to measure magnetostriction inside a nickel rod.
 
-#Results
+# Results
 Following the Electronic Measurement protocol:
 - A significant and repeated drop in signal strength of about 1.0(+-0.5) has been observed when the power supply current is increased at a steady rate.
 - When the current is increased to 10A very quickly, the signal strength drops instantaneously.
