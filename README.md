@@ -4,7 +4,8 @@ Digitally assisted optical platform using a Michaelson Interferometer allowing f
 
 A **Michaelson Interferometer** is a typical configuration for interferometry in which a laser first hits a beamsplitter. The light is roughly equally split, travelling in two perpendicular directions, but hit a mirror, which bounces both beams back to the beamsplitter. This makes the light recombine in a strange way, creating a rippling effect and travelling in a completely new direction. The change in light intensity caused by these ripples as one of the mirrors moves can be measured by a photodiode and can be used to calculate the wavelength of the light to, in theory, calculate the phase shift caused by a magnetic field caused by a solenoid. This is done with the formula
 $$\lambda = \frac{2d}{\Delta N}$$ , where d is the distance the mirror moves by and ΔN is the number of fringes observed.
-In turn, it is therefore possible to measure a **magnetostriction** strength using a mirror attached to a metal rod inside a solenoid - as the magnetic field affects the rod, the mirror moves, and the fringes shift in a measurable manner. - see more details in JOURNAL.md for more details on the formulas/methodology used.
+In turn, it is therefore possible to measure a **magnetostriction** strength using a mirror attached to a metal rod inside a solenoid - as the magnetic field affects the rod, the mirror moves, and the fringes shift in a measurable manner. 
+The aim of this project is therefore to detect fringe shifts caused magnetostrictive strain.
 <div align="left">
   <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-Interference%20pattern%20example.jpg" width="400" />
 </div>
@@ -59,7 +60,7 @@ MMM: Micrometer mirror mount\
 PMB: Photodiode mounting bracket\
 SPB: Spoilboard\
 
-**3D Printing**
+# 3D Models
 - To print all components, the stl files were used and sliced into gcode- this may lead to inconsistencies when using the step file! Please beware of this if trying to replicate the experiment.
 
 # Testing Checklist
@@ -95,12 +96,17 @@ SPB: Spoilboard\
 Further explanations are in the JOURNAL.md file - I recommend checking it out! 
 
 # Electronics
-  <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Tinkercad%20wiring%20schematic.png" width="400" />
+  <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Tinkercad%20wiring%20schematic%2001.png" width="500" />
+  Fig 1.02: Original theoretical wiring for TIA amplification system for a photodiode.
+ <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Tinkercad%20wiring%20schematic%2002.png" width="500" />
+  Fig 1.03: Real-world wiring for TIA amplification system used in trial results.
 
 There are two electronic circuits which make up the interferometry platform. The first is pictured above - it passes 5V through an MCP601 op-amp paired with a BPW34 photodiode to receive and amplify light signals, connected to the microcontroller - also connected to the 3.3V power source is 100Ohm resistor in series with a 650nm red laser diode.
 
-The second is a 10A,30V power supply in CC mode running through a 120 turn, 25ft copper wire to create a solenoid magnetic field, which is used to measure magnetostriction inside a nickel rod.
-
+The second is a 10A,30V rated power supply in CC mode running through a 120 turn, 25ft copper wire to create a solenoid magnetic field, which is used to measure magnetostriction inside a nickel rod:\
+ <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Solenoid%20wiring%20representation.png" width="500" />\
+  Fig 1.04: Electrical wiring diagram of DC power supply with solenoid.
+  
 # Results
 Following the Electronic Measurement protocol:
 - A significant and repeated drop in signal strength of about 1.0(+-0.5) has been observed when the power supply current is increased at a steady rate.
@@ -109,7 +115,7 @@ Following the Electronic Measurement protocol:
 Due to these factors, qualitative proof of the magnetostrictive properties of a nickel rod has been established beyond reasonable doubt, as the phase shift must can only have been caused by mechanical movement.
 <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Magnetostriction%20test%2001.jpeg"/>
 
-# Threshold Detection Limit
+
 Sources for this document:\
 [1]
 
