@@ -1,14 +1,17 @@
 # Helios-Michaelson-Interferometer
+  <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Final%20project.jpg" />
+
 Digitally assisted optical platform using a Michaelson Interferometer allowing for magnetostriction testing using red laser light. 
-
-
+---
+  Fig 1.01: Image of the complete build with mirrors aligned and power supply current at 0A.
+# About
 A **Michaelson Interferometer** is a typical configuration for interferometry in which a laser first hits a beamsplitter. The light is roughly equally split, travelling in two perpendicular directions, but hit a mirror, which bounces both beams back to the beamsplitter. This makes the light recombine in a strange way, creating a rippling effect and travelling in a completely new direction. The change in light intensity caused by these ripples as one of the mirrors moves can be measured by a photodiode and can be used to calculate the wavelength of the light to, in theory, calculate the phase shift caused by a magnetic field caused by a solenoid. This is done with the formula
 $$\lambda = \frac{2d}{\Delta N}$$ , where d is the distance the mirror moves by and ΔN is the number of fringes observed.
 In turn, it is therefore possible to measure a **magnetostriction** strength using a mirror attached to a metal rod inside a solenoid - as the magnetic field affects the rod, the mirror moves, and the fringes shift in a measurable manner.
 <div align="left">
   <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-Interference%20pattern%20example.jpg" width="400" />
 </div>
-Fig 1.01: Example of an enlarged fringe image produced by a michaelson interferometer. (Wikipedia Commons) [1]
+Fig 1.02: Example of an enlarged fringe image produced by a Michaelson interferometer. (Wikipedia Commons) [1]
 
 
 The aim of this project is therefore to detect fringe shifts caused magnetostrictive strain. The object's technical objective is to build a Michaelson Interferometer system which can:
@@ -74,17 +77,17 @@ SPB: Spoilboard
 # 3D Models
 - To print all components, the stl files were used and sliced into gcode- this may lead to inconsistencies when using the step file, as it was converted online! Please beware of this if trying to print models.\
   <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/PMB%20final.png" width="500" />\
-  Fig 1.02: Finalized version of the PMB.\
+  Fig 1.03: Finalized version of the PMB.\
     <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/LDM%20final.png" width="500" />\
-  Fig 1.03: Finalized version of the LDM.\
+  Fig 1.04: Finalized version of the LDM.\
     <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/LMB%20final.png" width="500" />\
-  Fig 1.04: Finalized version of the LMB.\
+  Fig 1.05: Finalized version of the LMB.\
     <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/SMB%20final.png" width="500" />\
-  Fig 1.05: Finalized version of the SMB.\
+  Fig 1.06: Finalized version of the SMB.\
     <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/MMM%20final.png" width="500" />\
-  Fig 1.06: Finalized version of the MMM.\
+  Fig 1.07: Finalized version of the MMM.\
     <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/BSM%20final.png" width="500" />\
-  Fig 1.07: Finalized version of the BSM.\
+  Fig 1.08: Finalized version of the BSM.\
 # Testing Checklist
 
 **Preparation**
@@ -119,15 +122,15 @@ Further explanations are in the JOURNAL.md file - I recommend checking it out!
 
 # Electronics
   <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Tinkercad%20wiring%20schematic%2001.png" width="500" />
-  Fig 1.08: Original theoretical wiring for TIA amplification system for a photodiode.
+  Fig 1.09: Original theoretical wiring for TIA amplification system for a photodiode.
  <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Tinkercad%20wiring%20schematic%2002.png" width="500" />
-  Fig 1.09: Real-world wiring for TIA amplification system used in trial results.
+  Fig 1.10: Real-world wiring for TIA amplification system used in trial results.
 
 There are two electronic circuits which make up the interferometry platform. The first is pictured above - it passes 5V through an MCP601 op-amp paired with a BPW34 photodiode to receive and amplify light signals, connected to the microcontroller - also connected to the 3.3V power source is 100Ohm resistor in series with a 650nm red laser diode.
 
 The second is a 10A,30V rated power supply in CC mode running through a 120 turn, 25ft copper wire to create a solenoid magnetic field, which is used to measure magnetostriction inside a nickel rod:\
  <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Solenoid%20wiring%20representation.png" width="500" />\
-  Fig 1.10: Electrical wiring diagram of DC power supply with solenoid.
+  Fig 1.11: Electrical wiring diagram of DC power supply with solenoid.
   
 # Results
 Following the Electronic Measurement protocol:
@@ -136,8 +139,9 @@ Following the Electronic Measurement protocol:
 - When the photodiode is fully covered, increasing the current does not affect it in any way.
 Due to these factors, qualitative proof of the magnetostrictive properties of a nickel rod has been established beyond reasonable doubt, as the phase shift must can only have been caused by mechanical movement.
 <img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Magnetostriction%20test%2001.jpeg"/>
-Fig 1.11: Representation of obtained results from magnetostriction, trial run 1.
-
+Fig 1.12: Representation of obtained results from magnetostriction, trial run 1.
+<img src="https://github.com/rsourcer/Project-Helios/blob/main/src/Images/Helios%20-%20Graph%20Observation.jpg"/>
+Fig 1.13: Observation of signal graph peaks as power supply current changes from 10A down to 0A.
 Sources for this document:\
 [1]
 
